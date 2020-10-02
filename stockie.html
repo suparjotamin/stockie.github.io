@@ -1,0 +1,2273 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {font-family: Arial;}
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            }
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+            }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+            }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            overflow:auto;
+            max-height:450px;
+            }
+        table {
+            width: border-collapse: collapse;
+            border : 1px solid #ddd
+            }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+            }
+        th {
+            padding: 10px;
+            text-align: left;
+            background-color: #4CAF50
+            }
+        td {
+            padding: 10px;
+            text-align: left;
+            }
+        
+        .invisible-area {
+            position: absolute;
+            }
+
+        .tooltip {
+        display: none;
+        background: white;
+        border-radius: 5px;
+        border: 1px black solid;
+        position: absolute;
+        background-color: white;
+        border-radius: 5px;
+        padding: 1px;
+        z-index: 1;
+        top: 0px;
+        left: 150%;
+        overflow:auto;
+        max-height:200px;
+        }
+
+        .invisible-area .tooltip::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent black transparent transparent;
+        
+        }
+
+        .invisible-area:hover .tooltip {
+        display: block;
+        }
+
+        .pattern {
+            background-color:powderblue;
+            border-radius: 5px;
+            text-align:center;
+        }
+
+        
+.area-UNVR-1{
+    height: 55.344827586206975px;
+    width: 13px;
+    top: 226.4827586206893px;
+    left: 120.0px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-2{
+    height: 88.5517241379307px;
+    width: 13px;
+    top: 193.27586206896558px;
+    left: 149.15px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-3{
+    height: 77.48275862068976px;
+    width: 13px;
+    top: 215.41379310344792px;
+    left: 178.3px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-4{
+    height: 33.206896551724185px;
+    width: 13px;
+    top: 248.6206896551721px;
+    left: 207.45px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-5{
+    height: 121.75862068965489px;
+    width: 13px;
+    top: 171.1379310344828px;
+    left: 236.6px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-6{
+    height: 66.41379310344792px;
+    width: 13px;
+    top: 171.1379310344828px;
+    left: 265.75px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-7{
+    height: 22.137931034482335px;
+    width: 13px;
+    top: 182.20689655172418px;
+    left: 294.9px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-8{
+    height: 44.27586206896558px;
+    width: 13px;
+    top: 204.34482758620652px;
+    left: 324.04999999999995px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-9{
+    height: 132.82758620689674px;
+    width: 13px;
+    top: 259.6896551724135px;
+    left: 353.2px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-10{
+    height: 221.3793103448279px;
+    width: 13px;
+    top: 215.41379310344792px;
+    left: 382.34999999999997px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-11{
+    height: 88.55172413793116px;
+    width: 13px;
+    top: 204.34482758620652px;
+    left: 411.5px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-12{
+    height: 77.48275862068976px;
+    width: 13px;
+    top: 248.6206896551721px;
+    left: 440.65px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-13{
+    height: 66.41379310344837px;
+    width: 13px;
+    top: 281.8275862068963px;
+    left: 469.79999999999995px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-14{
+    height: 44.27586206896558px;
+    width: 13px;
+    top: 303.9655172413791px;
+    left: 498.95px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-15{
+    height: 44.27586206896558px;
+    width: 13px;
+    top: 292.8965517241377px;
+    left: 528.0999999999999px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-16{
+    height: 55.344827586206975px;
+    width: 13px;
+    top: 315.03448275862047px;
+    left: 557.25px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-17{
+    height: 44.27586206896558px;
+    width: 13px;
+    top: 348.24137931034466px;
+    left: 586.4px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-18{
+    height: 44.27586206896558px;
+    width: 13px;
+    top: 348.24137931034466px;
+    left: 615.55px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-19{
+    height: 55.344827586206975px;
+    width: 13px;
+    top: 392.51724137931024px;
+    left: 644.6999999999999px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-20{
+    height: 88.55172413793116px;
+    width: 13px;
+    top: 359.31034482758605px;
+    left: 673.85px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-pattern-6{
+    height: 30px;
+    width: 13px;
+    top: 141.1379310344828px;
+    left: 265.75px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-pattern-7{
+    height: 30px;
+    width: 13px;
+    top: 152.20689655172418px;
+    left: 294.9px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-pattern-8{
+    height: 30px;
+    width: 13px;
+    top: 174.34482758620652px;
+    left: 324.04999999999995px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-pattern-10{
+    height: 30px;
+    width: 13px;
+    top: 185.41379310344792px;
+    left: 382.34999999999997px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-pattern-13{
+    height: 30px;
+    width: 13px;
+    top: 251.82758620689629px;
+    left: 469.79999999999995px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-pattern-14{
+    height: 30px;
+    width: 13px;
+    top: 273.9655172413791px;
+    left: 498.95px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-pattern-18{
+    height: 30px;
+    width: 13px;
+    top: 318.24137931034466px;
+    left: 615.55px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-UNVR-pattern-20{
+    height: 30px;
+    width: 13px;
+    top: 329.31034482758605px;
+    left: 673.85px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-1{
+    height: 10.908606855528546px;
+    width: 13px;
+    top: 274.9755349160898px;
+    left: 120.0px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-2{
+    height: 29.24562828581486px;
+    width: 13px;
+    top: 248.31812866846622px;
+    left: 149.15px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-3{
+    height: 24.975791546246683px;
+    width: 13px;
+    top: 226.09143332113206px;
+    left: 178.3px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-4{
+    height: 64.2233747254885px;
+    width: 13px;
+    top: 207.4912565716296px;
+    left: 207.45px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-5{
+    height: 48.7816865606012px;
+    width: 13px;
+    top: 260.95226150807616px;
+    left: 236.6px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-6{
+    height: 74.92728538816561px;
+    width: 13px;
+    top: 291.0167638158707px;
+    left: 265.75px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-7{
+    height: 36.907968616606354px;
+    width: 13px;
+    top: 318.56614030607386px;
+    left: 294.9px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-8{
+    height: 22.694591484688885px;
+    width: 13px;
+    top: 317.68876253244196px;
+    left: 324.04999999999995px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-9{
+    height: 46.79300525730366px;
+    width: 13px;
+    top: 309.73394806867736px;
+    left: 353.2px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-10{
+    height: 30.590946822088654px;
+    width: 13px;
+    top: 340.55882064679975px;
+    left: 382.34999999999997px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-11{
+    height: 18.307747241816628px;
+    width: 13px;
+    top: 336.4644505369006px;
+    left: 411.5px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-12{
+    height: 30.53244307043667px;
+    width: 13px;
+    top: 319.5019772060705px;
+    left: 440.65px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-13{
+    height: 23.162532247330887px;
+    width: 13px;
+    top: 336.0550135259107px;
+    left: 469.79999999999995px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-14{
+    height: 20.413436048418248px;
+    width: 13px;
+    top: 358.28170887324484px;
+    left: 498.95px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-15{
+    height: 28.017317252845146px;
+    width: 13px;
+    top: 366.00255295568843px;
+    left: 528.0999999999999px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-16{
+    height: 41.4703241144349px;
+    width: 13px;
+    top: 370.0384193139355px;
+    left: 557.25px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-17{
+    height: 21.64174708138796px;
+    width: 13px;
+    top: 354.4212645193794px;
+    left: 586.4px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-18{
+    height: 31.234354214399673px;
+    width: 13px;
+    top: 358.80810876225155px;
+    left: 615.55px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-19{
+    height: 30.707909700105574px;
+    width: 13px;
+    top: 369.6874860545977px;
+    left: 644.6999999999999px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-20{
+    height: 27.900354374828225px;
+    width: 13px;
+    top: 356.87788658531883px;
+    left: 673.85px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-1{
+    height: 30px;
+    width: 13px;
+    top: 244.97553491608983px;
+    left: 120.0px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-2{
+    height: 30px;
+    width: 13px;
+    top: 218.31812866846622px;
+    left: 149.15px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-4{
+    height: 30px;
+    width: 13px;
+    top: 177.4912565716296px;
+    left: 207.45px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-5{
+    height: 30px;
+    width: 13px;
+    top: 230.95226150807616px;
+    left: 236.6px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-6{
+    height: 30px;
+    width: 13px;
+    top: 261.0167638158707px;
+    left: 265.75px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-7{
+    height: 30px;
+    width: 13px;
+    top: 288.56614030607386px;
+    left: 294.9px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-8{
+    height: 30px;
+    width: 13px;
+    top: 287.68876253244196px;
+    left: 324.04999999999995px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-9{
+    height: 30px;
+    width: 13px;
+    top: 279.73394806867736px;
+    left: 353.2px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-10{
+    height: 30px;
+    width: 13px;
+    top: 310.55882064679975px;
+    left: 382.34999999999997px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-11{
+    height: 30px;
+    width: 13px;
+    top: 306.4644505369006px;
+    left: 411.5px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-12{
+    height: 30px;
+    width: 13px;
+    top: 289.5019772060705px;
+    left: 440.65px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-14{
+    height: 30px;
+    width: 13px;
+    top: 328.28170887324484px;
+    left: 498.95px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-16{
+    height: 30px;
+    width: 13px;
+    top: 340.0384193139355px;
+    left: 557.25px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-17{
+    height: 30px;
+    width: 13px;
+    top: 324.4212645193794px;
+    left: 586.4px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AAPL-pattern-18{
+    height: 30px;
+    width: 13px;
+    top: 328.80810876225155px;
+    left: 615.55px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-1{
+    height: 19.25799374999997px;
+    width: 13px;
+    top: 218.38936624999997px;
+    left: 120.0px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-2{
+    height: 36.97919999999999px;
+    width: 13px;
+    top: 193.06688000000008px;
+    left: 149.15px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-3{
+    height: 19.25799374999997px;
+    width: 13px;
+    top: 185.31352625px;
+    left: 178.3px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-4{
+    height: 26.93731687499985px;
+    width: 13px;
+    top: 169.5440000000001px;
+    left: 207.45px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-5{
+    height: 76.18122468750016px;
+    width: 13px;
+    top: 195.77461531249992px;
+    left: 236.6px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-6{
+    height: 111.0896737500002px;
+    width: 13px;
+    top: 239.70175999999992px;
+    left: 265.75px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-7{
+    height: 49.65488812500007px;
+    width: 13px;
+    top: 293.38319187499997px;
+    left: 294.9px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-8{
+    height: 48.5577703125px;
+    width: 13px;
+    top: 271.88190968749996px;
+    left: 324.04999999999995px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-9{
+    height: 73.68715500000008px;
+    width: 13px;
+    top: 252.68972093749994px;
+    left: 353.2px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-10{
+    height: 54.79500093750016px;
+    width: 13px;
+    top: 307.1517846874999px;
+    left: 382.34999999999997px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-11{
+    height: 37.55027906250007px;
+    width: 13px;
+    top: 319.45772093749997px;
+    left: 411.5px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-12{
+    height: 27.15920812499985px;
+    width: 13px;
+    top: 324.54025437500013px;
+    left: 440.65px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-13{
+    height: 46.4664553125001px;
+    width: 13px;
+    top: 319.51931281249995px;
+    left: 469.79999999999995px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-14{
+    height: 23.370806250000214px;
+    width: 13px;
+    top: 384.3603096874999px;
+    left: 498.95px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-15{
+    height: 54.34299281250014px;
+    width: 13px;
+    top: 380.9211959375px;
+    left: 528.0999999999999px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-16{
+    height: 37.390080000000125px;
+    width: 13px;
+    top: 412.06592px;
+    left: 557.25px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-17{
+    height: 54.97165124999992px;
+    width: 13px;
+    top: 341.3986728125001px;
+    left: 586.4px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-18{
+    height: 55.31271375000006px;
+    width: 13px;
+    top: 344.27072px;
+    left: 615.55px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-19{
+    height: 42.85480406250008px;
+    width: 13px;
+    top: 367.9784759375px;
+    left: 644.6999999999999px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-20{
+    height: 42.131651250000004px;
+    width: 13px;
+    top: 354.73170875000005px;
+    left: 673.85px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-pattern-1{
+    height: 30px;
+    width: 13px;
+    top: 188.38936624999997px;
+    left: 120.0px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-pattern-4{
+    height: 30px;
+    width: 13px;
+    top: 139.5440000000001px;
+    left: 207.45px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-pattern-7{
+    height: 30px;
+    width: 13px;
+    top: 263.38319187499997px;
+    left: 294.9px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-pattern-8{
+    height: 30px;
+    width: 13px;
+    top: 241.88190968749996px;
+    left: 324.04999999999995px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-pattern-9{
+    height: 30px;
+    width: 13px;
+    top: 222.68972093749994px;
+    left: 353.2px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-pattern-10{
+    height: 30px;
+    width: 13px;
+    top: 277.1517846874999px;
+    left: 382.34999999999997px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-pattern-11{
+    height: 30px;
+    width: 13px;
+    top: 289.45772093749997px;
+    left: 411.5px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-pattern-13{
+    height: 30px;
+    width: 13px;
+    top: 289.51931281249995px;
+    left: 469.79999999999995px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-pattern-14{
+    height: 30px;
+    width: 13px;
+    top: 354.3603096874999px;
+    left: 498.95px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+.area-AMZN-pattern-16{
+    height: 30px;
+    width: 13px;
+    top: 382.06592px;
+    left: 557.25px;
+    border: 0px solid #555;
+    position: absolute;
+}
+        
+
+        </style>
+        
+</head>
+<body>
+
+<h2>Report</h2>
+
+<div class="tab">
+    <button class="tablinks" onclick="openreport(event, 'Overview')">Overview</button>
+    <button class="tablinks" onclick="openreport(event, 'Top Gain')">Happening </button>
+</div>
+
+<div id="Overview" class="tabcontent">
+
+<select id="mySelect" onchange="changeimage(this.value)" style="position:absolute;;left:150px; top:124px;">
+ <option value="UNVR">UNVR</option>
+ <option value="AAPL">AAPL</option>
+ <option value="AMZN">AMZN</option>
+ </select>
+
+
+<div id = "UNVR">
+    <img src='data:image/png;base64,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TgcOHNB3v/td5eXlqVOnrz7CP//887r33nv1zDPP6MEHH1SfPn0cY3Jzc2W1WmWxWLR9+3b5+PhIkmbMmKHhw4crNTVVsbGx6tq1q2PMihUrVFJSoqSkJOXl5cnT86uLpaZMmaIJEyZo+vTp2r9/v6O9rbgECwAAALgK7N+/Xx988IFCQkI0btw4R3t+fr4kadGiRY7wIUk9e/ZUZmamvvjiC61fv95pWy+++KIkafHixY7wIUmDBw/WlClTVFlZKavV6mg3DENr1qyRJC1fvtwpZIwfP14jRozQgQMH9N5777l9nAQQAAAA4Cqwdu1aSdLjjz/utAakoqJCkhQWFtZkTGPb5WtBampqZLPZ5OfnpxEjRjQZ03h5144dOxxt5eXlOnHihPr376877rijVWPaigACAAAAdLAvvvhCmzZtkpeXl5544gmn2i233CJJOnr0aJNxR44ckSR9+umnjrby8nLV19crLCzM6YxJo379+kmSDh065GhrHN+/f/9m96+5MW3FGhAAAADgGygrK9OgQYOare3bt69N2/zd736nc+fOady4cbrtttucauPGjdPLL7+sZ599Vrm5uY6zI5WVlVq5cqWkrxaqNzp//rwkKSAgoNm5GtvPnTvn1pi2IoAAAIDrTktP3bbX2W+Mp3JfZ09fv941Xn71wx/+sElt0aJF+uMf/yir1arIyEg98MADunjxogoKChQSEqITJ064vTDcTAQQAGhv/MEHOlRVVtWVO5mN3wvXlfDw8Daf6WjO3/72N9lsNvXp00fx8fFN6r1799bevXv1s5/9TIWFhfrNb36jW265RVOmTFFGRob69eunnj17Ovo3nq1oPKvxdY3tN998s1tj2ooAAgAAAHQgV4vPL9erVy+tXr1aq1evdmpvXBQ+ePBgR1vfvn3l5eWlI0eO6NKlS03WgRw+fFiS83qPAQMGSHK9xqO5MW117ZyrAQAAAK4zNTU1ev311+Xl5dXkYYKt8dprr0mSHnnkEUebj4+PLBaLqqurtXv37iZjioqKJEmxsbGOtr59++r222/XoUOHml3s3tyYtiKAAAAAAB1k8+bNqqqq0tixY5ssPm/U0NAgu93epP3111/Xa6+9JovFogkTJjjVnnrqKUnSggULVFNT42jfu3ev8vLy1KNHD02aNMnR7uHhoRkzZkiSfvzjH6uhocFRKygo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' width="800" height="400" >  
+    
+<div class="invisible-area area-UNVR-1">
+    <div class="tooltip"><pre>
+Date :2020-08-31
+Open :8275.0
+High :8275.0
+Low  :8150.0
+Close:8225.0
+Vol  :17339800</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-2">
+    <div class="tooltip"><pre>
+Date :2020-09-01
+Open :8350.0
+High :8350.0
+Low  :8150.0
+Close:8225.0
+Vol  :15367200</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-3">
+    <div class="tooltip"><pre>
+Date :2020-09-02
+Open :8300.0
+High :8300.0
+Low  :8125.0
+Close:8150.0
+Vol  :17081900</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-4">
+    <div class="tooltip"><pre>
+Date :2020-09-03
+Open :8150.0
+High :8225.0
+Low  :8150.0
+Close:8175.0
+Vol  :9683100</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-5">
+    <div class="tooltip"><pre>
+Date :2020-09-04
+Open :8200.0
+High :8400.0
+Low  :8125.0
+Close:8400.0
+Vol  :14782100</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-6">
+    <div class="tooltip"><pre>
+Date :2020-09-07
+Open :8400.0
+High :8400.0
+Low  :8250.0
+Close:8375.0
+Vol  :14396400</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-7">
+    <div class="tooltip"><pre>
+Date :2020-09-08
+Open :8375.0
+High :8375.0
+Low  :8325.0
+Close:8375.0
+Vol  :5156800</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-8">
+    <div class="tooltip"><pre>
+Date :2020-09-09
+Open :8225.0
+High :8325.0
+Low  :8225.0
+Close:8250.0
+Vol  :11364100</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-9">
+    <div class="tooltip"><pre>
+Date :2020-09-10
+Open :8200.0
+High :8200.0
+Low  :7900.0
+Close:7975.0
+Vol  :25116900</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-10">
+    <div class="tooltip"><pre>
+Date :2020-09-11
+Open :7850.0
+High :8300.0
+Low  :7800.0
+Close:8300.0
+Vol  :8948800</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-11">
+    <div class="tooltip"><pre>
+Date :2020-09-14
+Open :8325.0
+High :8325.0
+Low  :8125.0
+Close:8200.0
+Vol  :17218200</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-12">
+    <div class="tooltip"><pre>
+Date :2020-09-15
+Open :8200.0
+High :8225.0
+Low  :8050.0
+Close:8100.0
+Vol  :11223900</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-13">
+    <div class="tooltip"><pre>
+Date :2020-09-16
+Open :8100.0
+High :8150.0
+Low  :8000.0
+Close:8000.0
+Vol  :3827300</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-14">
+    <div class="tooltip"><pre>
+Date :2020-09-17
+Open :8025.0
+High :8100.0
+Low  :8000.0
+Close:8075.0
+Vol  :2734700</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-15">
+    <div class="tooltip"><pre>
+Date :2020-09-18
+Open :8100.0
+High :8125.0
+Low  :8025.0
+Close:8025.0
+Vol  :8783200</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-16">
+    <div class="tooltip"><pre>
+Date :2020-09-21
+Open :8025.0
+High :8075.0
+Low  :7950.0
+Close:8000.0
+Vol  :3295800</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-17">
+    <div class="tooltip"><pre>
+Date :2020-09-22
+Open :7900.0
+High :8000.0
+Low  :7900.0
+Close:7950.0
+Vol  :7428400</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-18">
+    <div class="tooltip"><pre>
+Date :2020-09-23
+Open :7950.0
+High :8000.0
+Low  :7900.0
+Close:7925.0
+Vol  :9067300</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-19">
+    <div class="tooltip"><pre>
+Date :2020-09-24
+Open :7850.0
+High :7900.0
+Low  :7775.0
+Close:7800.0
+Vol  :7510400</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-UNVR-20">
+    <div class="tooltip"><pre>
+Date :2020-09-25
+Open :7850.0
+High :7975.0
+Low  :7775.0
+Close:7925.0
+Vol  :8029400</pre>
+    </div>
+</div>
+          
+    
+<div class = "invisible-area area-UNVR-pattern-6" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>hanging man</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAA40lEQVR4nO3awQmDQBQG4WdIDYsnWxErF1vxJFuCl/WcW0Ie7LDMV8CvMCiKTq21FsJ49T4BfTIIjEFgDAJjEBiDwLy7HXldI2rN2zvPiGXJ2ysl4jjy9r7UL0itEfOct3dd+XsdeMuCMQiMQWAMAmMQGIPAGASm33tIKbnP+vedu1dK3tYPpmE+UG1bxL73Pou/ecuCMQiMQWAMAmMQGIPAGATGIDAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMAaBMQjMOL+SDsIrBMYgMAaBMQiMQWAe9tQgHFcQyHsAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="hanging_man UNVR" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>tweezer top</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAA8klEQVR4nO3asQ2DMBBA0SOKUtHQZQxWYKrMkKlYwWOko3GVxqmpsMQp+Yr+q09w0hduzNBaayGMy68X0J5BYAwCYxAYg8AYBOaa/cDpOXXN1XeN8TZ2zW6P7cxKe1PfflFrxNi3X2x5+6UHiYiY7/PhTHmV7rl08/F7o5T+uUQeWTAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBGbI/lHOG8Nz0oP8jWWJWNevv9YjC8YgMAaBMQiMQWAMAmMQGIPAGATGIDAGgTEIjEFgDAJjEBiDwBgExhtDGL8QGIPAGATGIDAGgfkAeJEwVRuubnEAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="tweezer_top UNVR" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-UNVR-pattern-7" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>dragonfly doji</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAAx0lEQVR4nO3bwQkCMRBA0VmxIFuwEi1NK7EFO1rP3gQX9rO8V8Ak8Ekghyzruq5DxmnvDfBNkBhBYgSJESRGkJjzbis/HjPP53bz3u+Zy2W7ebfbzP2+3bwfLYd5h1yvM6/X3rv4mysrRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWIEiREkRpAYQWKO88fwIJyQGEFiBIkRJEaQmA9BfRRYyhzq2AAAAABJRU5ErkJggg==' style= "border:1px solid #555"><br>
+        Bullish Reversal<br>
+        <p class="dragonfly_doji UNVR" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-UNVR-pattern-8" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>inverted Hammer</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAA9klEQVR4nO3bQQqCQBxG8THaGbQbXHkV6SYdrY7iVVyJuyA3QtimTdCi4E/zkPc7wOfAg9GN1bquaxLGrvQB9M4gMAaBMQiMQWAMArOZIKfrqfQRQmwmyFYYBMYgMAaBMQiMQWAMAmMQGIPAGATGIDAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMAaBMQiMQWCqUn/hdpcuTfMUtjfchtQe27C9XOfUn/uwvW/t//7El2meUnNowvbG+xi+V4JXFoxBYAwCU+wdkuscek8vjyV0L9c5bOsXxb6y9JlXFoxBYAwCYxAYg8A8AU5jKC0amqbQAAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bullish Reversal<br>
+        <p class="inverted_Hammer UNVR" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-UNVR-pattern-10" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bullish engulfing</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABHElEQVR4nO3bsQnCQBSA4aeIVZp0jpEVMoljOINjOElWyBh2aa6yiXVAyANP/SX/Vx948ONxPs7dPM9zCGP/6w1oySAwBoExCIxBYAwCc/j1Br6tvbapdeVRojk2qbXTZXpnSwubCxIR0Z261TXjfUyvq8kjC8YgMAaBMQiMQWAMAmMQGIPAGATGIDAGgTEITP3hYpubpkYpEU1umhpTvWkq3Wemvd36lDTGMb9uQzyyYAwCYxAYg8AYBMYgMJ+59mauqqVs7kqbUT9I9kdc30cMQ/WP/3ceWTAGgTEIjEFgDAKzybe9mfe45VGqv9vN2Pmnz9f6Wx/D+fvXco8sGIPAGATGIDAGgTEIjNdeGL8hMAaBMQiMQWAMAvMEMX80XDyVdDIAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bullish Reversal<br>
+        <p class="bullish_engulfing UNVR" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-UNVR-pattern-13" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>three black crow</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABBUlEQVR4nO3aPQ6CMABA4WIcWbgJV+jJuQI3YWGvk4PhJ9EWeNT3jTVSzIuFok1KKQVhPK4+AX0yCIxBYAwCYxAYg8AcGyTGQw9fI78hMAaBMQhMU+TRSdetj89zCG27/b5pyp66Ns9iR+r75dg4ro+/X9OCSxaMQWAMAmMQGIPAGATGIDD32hhuzXPEXBcpszE888PubTQr2IS6ZMEYBMYgMAaBMQiMQWAMAmMQGIPAGATGIDAGgSnztPcsf/C0915B9sQYwjBcfRbZXLJgDAJjEJhyfyWtza83EJk3D/Vc1Evruu9/Lh7H7CAuWTAGgXHJ2uI1RCG4ZOEYBMYgMAaBMQjMC9UqSqNBCap/AAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="three_black_crow UNVR" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-UNVR-pattern-14" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>tweezer bottom</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABC0lEQVR4nO3ZsQ2CQBhA4R9jrGjoHIMVbhLHcAbHcBJWYAw7mqtssDYx4WLAe4b31Re45IXL5aeZ53kOYRxqb0DvDAJjEBiDwBgExiAw9YKkVO3VZH4hMAaBMQiMQWAMAmMQGIPAGATGIDAGgTEITLP6L9yuK1uXc0Tblq2dpu/382eOmzy175fXjGP5uh3xyIIxCIxBYAwCYxAYg8AYBMYgMAaBMQjMNqMTsO5WNmvLzxztqWzWNl3Xm7XtLkhERH9enqGNj7F43Zo8smAMAmMQGIPA7O6PIf2WtX6QUilFDEOVV5dI9xTD5ff788iCMQiMQWAMAmMQmHq3LH3kFwJjEBiDwBgExiAwLyb8N9T27An6AAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bullish Reversal<br>
+        <p class="tweezer_bottom UNVR" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-UNVR-pattern-18" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>tweezer top</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAA8klEQVR4nO3asQ2DMBBA0SOKUtHQZQxWYKrMkKlYwWOko3GVxqmpsMQp+Yr+q09w0hduzNBaayGMy68X0J5BYAwCYxAYg8AYBOaa/cDpOXXN1XeN8TZ2zW6P7cxKe1PfflFrxNi3X2x5+6UHiYiY7/PhTHmV7rl08/F7o5T+uUQeWTAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBGbI/lHOG8Nz0oP8jWWJWNevv9YjC8YgMAaBMQiMQWAMAmMQGIPAGATGIDAGgTEIjEFgDAJjEBiDwBgExhtDGL8QGIPAGATGIDAGgfkAeJEwVRuubnEAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="tweezer_top UNVR" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-UNVR-pattern-20" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>tweezer bottom</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABC0lEQVR4nO3ZsQ2CQBhA4R9jrGjoHIMVbhLHcAbHcBJWYAw7mqtssDYx4WLAe4b31Re45IXL5aeZ53kOYRxqb0DvDAJjEBiDwBgExiAw9YKkVO3VZH4hMAaBMQiMQWAMAmMQGIPAGATGIDAGgTEITLP6L9yuK1uXc0Tblq2dpu/382eOmzy175fXjGP5uh3xyIIxCIxBYAwCYxAYg8AYBMYgMAaBMQjMNqMTsO5WNmvLzxztqWzWNl3Xm7XtLkhERH9enqGNj7F43Zo8smAMAmMQGIPA7O6PIf2WtX6QUilFDEOVV5dI9xTD5ff788iCMQiMQWAMAmMQmHq3LH3kFwJjEBiDwBgExiAwLyb8N9T27An6AAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bullish Reversal<br>
+        <p class="tweezer_bottom UNVR" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+         
+</div>
+
+<div id = "AAPL">
+    <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAGQCAYAAABWJQQ0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAgAElEQVR4nO3de3jU1YH/8c9wSwghITEs4VKIyEUQaTQqbRTI0GqBwqOtKLSEJWDjg8qlIj4+3iq6gcoSRLmsLFQx1Voo0UZAYetCoJjQLRuZNl3CRUIQkbBQQmBAEgjn90d/mWVIZjK5ncnl/Xqe/MH3nO+Z8818gfnMuXwdxhgjAAAAALCgTbA7AAAAAKD1IIAAAAAAsIYAAgAAAMAaAggAAAAAawggAAAAAKwhgAAAAACwhgACAAAAwBoCCAAAAABrCCAAAAAArCGAAAAAALCGAAIAAADAGgIIAAAAAGsIIAAAAACsIYAAAAAAsIYAAgAAAMAaAggAAAAAawggAAAAAKwhgAAAAACwhgACAAAAwBoCCAAAAABrCCAAAAAArCGAAAAAALCGAAIAAADAGgIIAAAAAGsIIAAAAACsIYAAAAAAsIYAAgAAAMAaAggAAAAAawggAAAAAKwhgAAAAACwhgACAAAAwBoCCAAAAABrCCAAAAAArCGAAAAAALCGAAIAAADAGgIIAAAAAGsIIAAAAACsIYAAAAAAsKZdsDvQnMXFxencuXO68cYbg90VAAAAWHDkyBFFRESoqKgo2F1ptggg9XDu3DldunQp2N0AAACAJXz2qz8CSD1Ujnzk5eUFuScAAACwISEhIdhdaPZYAwIAAADAGgIIAAAAAGsIIAAAAACsIYAAAAAAsIYAAgAAAMAaAggAAAAAawggAAAAAKwhgAAAAACwhgACAAAAwBoCCAAAAABrCCAAAAAArCGAAAAAALCGAAIAAADAGgIIAAAAAGsIIAAAAACsIYAAAAAAsIYAAgAAAMAaAggAAAAAawggAAAAAKwhgAAAAACwhgACAAAAwBoCCAAAAABrCCAAAAAArCGAAAAAALCGAAIAAADAGgIIAAAAAGsIIAAAAACsIYAAAAAAsIYAAgAAAMAaAggAAAAAawggAAAAAKwhgAAAAACwhgACAAAAwBoCCAAAAABrCCAAAAAArCGAAAAAALCGAAIAAADAGgIIAAAAAGsIIAAAAIBFmZmZmjVrloYPH66IiAg5HA4lJycHfP7PfvYzORwOORwOffHFF9XWqaio0NKlSzV06FB17NhR0dHRGjt2rHJzcxvqMuqMAAIAAABYlJaWphUrVsjlcqlnz561OnfTpk166623FB4e7rOOMUaTJk3S3LlzVV5erpkzZ+pHP/qR/vjHP2rEiBH66KOP6nsJ9UIAAQAAACxaunSpDh48qHPnzunNN98M+LxTp04pNTVVEydOVEJCgs9669atU2ZmphITE+VyubR48WK99dZbys7OVtu2bZWamqrz5883xKXUCQEEAAAAsMjpdKp///5yOBy1Ou/RRx+VJK1cudJvvcpQk5aWptDQUM/xO++8UxMnTtSpU6eUmZlZy143HAIIAAAA0MS98847ysrK0r//+7/rhhtu8Fnv0qVLys3NVVhYmIYPH16lfMyYMZKk7du3N1pfa0IAAQAAAJqwo0ePas6cOUpOTtb999/vt+7hw4dVUVGhvn37ql27dlXK+/fvL0k6ePBgo/Q1EFV7BQAAAMCngoICn2sw8vLyGvS1rl69qqlTpyo8PFzLli2rsX5paakkKTIystryyuNnz55tuE7WEgEEAAAAaKKWLl2qnTt36uOPP1ZUVFSwu9MgCCAAAABALQwaNKjBRzqqc/DgQT3//POaNm2axo4dG9A5lSMclSMh16s83qVLl4bpZB2wBgQAAABogvbt26eysjKtXbvW8+DByp+dO3dKkmc3raysLEnSTTfdpLZt26qwsFBXrlyp0uahQ4ckSQMGDLB3IddhBAQAAABoguLi4vTII49UW/bxxx+ruLhYDz30kCIiIhQXFydJCg0NVWJionbt2qVdu3bJ6XR6nbdlyxZJ0qhRoxq17/4QQAAAAIAmKD4+Xr/61a+qLUtKSlJxcbEWLlyofv36eZU99thj2rVrl1544QVt27bN8yyQPXv2aP369eratasefPDBRu+/LwQQAAAAwKKsrCzPlKni4mJJ0u7du5WSkiJJiomJUXp6ep3bnzRpkj788ENlZmbqtttu0/jx4/X3v/9d69evV0VFhdasWaOIiIh6X0ddEUAAAAAAi1wulzIyMryOFRYWqrCwUJLUp0+fegUQh8Oh3/72t0pMTNTbb7+t5cuXKzQ0VCNGjNALL7ygxMTEevW/vhzGGBPU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9R4KpM/GGDNz5kyzbNkyk5qaavr06VPbX29Q8J76f08lmTVr1pgTJ054fi5evFjr3zMaDwEkQOfPnzdt2rQxGzduNMb84y9PbGysSUtL89S5ePGiCQ8PN6tWrfLZzsqVK010dLTnz5988olxOBzmyy+/9Bx79913TUhIiCktLfXZzsMPP2y+//3vex373ve+ZyZNmuT58y233GJ+8YtfeNUZMWKEeeKJJ2q4Wv993rNnj5FkCgsLPccKCwuNJLNnz55atd2aNLd76MCBA0aScblcnvKKigrTtWtXs2bNGp/t7tu3z0gyn332mefYrl27jCSzf/9+r7o///nPTUpKilm7di0BJECt5T661oYNG/wGkNdff92MGjXKbNu2jQASgNZ4D/nq87UWL17cbALI9XhPvd9TSWbDhg21agd2MQUrQOfPn9fVq1cVFRUlSTpy5IiKi4t13333eep07NhRI0aMUG5urs92zp0752lDknbv3q1BgwbpW9/6lufYD37wA5WVlSkvL89nO7t37/Z67crzrn3te+65R5s2bdKxY8ckSbm5uXK5XBo9enSAV119nwcOHKiuXbvqrbfeUllZmcrKyrRmzRr17t1bt9xyS63abk2a2z1UVlYmSQoNDfWUt2nTRiEhIfrss8/8thseHq7ExETPscppNNde18cff6zNmzdr+fLlPttCVa3lPgrU3r17tWjRIv36179Wmzb8lxaI1nwPXd/nloL3tOp7OmfOHMXExOjOO+/UqlWrdPXq1Vq1i8bFv9YBmjNnjuLj4/Xd735XklRcXCxJ6tatm1e9bt26ecqud/ToUaWnp+vxxx/3HCsuLq7SRkxMjNq2beuzHV/nXf/ay5Yt07e//W317t1b7du318iRI7Vo0SKNGzcugCv23efOnTtrx44d+t3vfqewsDCFhYVp/fr1+vTTT9WxY8eA225tmts9dPPNN6t379567rnndObMGZWXl2vRokX66quvdOLECb/tdu3a1WvOvsPh0D/90z952v7666+Vmpqq9957j7UftdRa7qNAXLhwQZMmTdLy5cvVs2fPerXVmrTWe6i6PrcUvKfe7+krr7yi9evX6z//8z81adIkPfXUU1q4cGHA7aLxEUACMHfuXH322Wf64IMP1LZt2zq1cfLkSY0ePVr33nuvnnzyyYDP+/LLLxUeHu75qc1foOXLlys3N1cbN25UXl6eli5dqnnz5mnr1q2SpBkzZni1HWifv/nmG02fPl3f+c539Kc//Uk5OTm67bbbdP/99+vChQsB9681aY73UPv27fXhhx/q8OHDuuGGGxQWFqbs7GyNGTPG801zTfeQL1OmTNFjjz2mYcOGBXwOuI+uN3v2bN1zzz168MEHAz6ntWut91Bd+9wc8J5W7fOLL76oe+65R/Hx8Xrqqaf00ksvafHixQFfFxpfu2B3oKl78skntW7dOmVnZ6tv376e47GxsZL+8Regd+/enuMnT570lFUqLi7WqFGjNGTIEL377rte3wzHxsYqJyfHq/7p06dVUVGh2NhY9ejRQy6Xy1MWHR3tOe/kyZNe51372t98842effZZbdiwQePHj5ckDR06VC6XS+np6Ro9erReeeUVzZs3r9rr9tfn999/X4cPH1ZOTo7nH7v3339fUVFR+v3vf6/k5GR/v9JWp7neQ5KUkJAgl8ul0tJSlZeXq2vXrho2bJjuuOMOSar2HoqNjdWpU6dkjPH00xij//3f//W0vX37du3cuVMvv/yyp/zq1atq166d/u3f/k2PPvpojb/X1qa13UeB2LZtm44dO6aMjAxJ/7iPKvv0zDPPaMGCBbVusyVrrfeQvz43d7yngb2nw4YN07lz53Ty5MkqIzMIkuAuQWnaZs+ebbp162b27dtXpaxygdeCBQs8x7755hvTuXNnrwVeX3/9tRk4cKD58Y9/bC5fvlylncoFXseOHfMc+81vfhPQAq97773X69i9997rWeBVWlpqJJlNmzZ51Xn00UeN0+n0e9019XnZsmWma9eu5urVq55jly9fNp06dTIZGRl+225tmvM9VJ2DBw+aNm3amP/4j//wWadyEXpOTo7nWE5Ojtci9Pz8fK+ftLQ007FjR5Ofn2/OnDnjs+3WqjXeR9fytQj9wIEDXvfR22+/bSSZXbt2meLi4oDabi1a6z1UU5+v1dwWofOe1vyeVnr99ddNaGiouXTpUkD10fgIID48/vjjpnPnzmbbtm1e27idP3/eU+fVV181ERER5oMPPjD5+flm4sSJXlvcHT9+3PTv39+MHDnSfPnll17tXLlyxRjzf1vcOZ1O8/nnn5tPP/3U9OjRo8Yt7nJyckzbtm3NL3/5S1NQUGAWLlxo2rVr57UN78iRI80tt9xisrOzTWFhoVm7dq0JDQ01y5Yt89luIH0uKCgwISEhZsaMGWbfvn3mb3/7m0lOTjYRERFe/0i1di3hHvrd735ntm/fbg4fPmyysrJMnz59zI9//OMar3306NFmyJAhnm14hwwZUu02vJXYBcu31nwfHT161Ozdu9csXrzYSDJ79+41e/fu9br2a2VnZ7MLVjVa6z0USJ+NMebQoUNm79695sknnzTdu3f33GdlZWW1/l3bwnvqu88bN240q1evNvn5+eaLL74wa9asMREREWb27Nl1+l2jcRBAfJBU7c9LL73kqXP16lXz0ksvmdjYWBMSEmJGjBhh8vPzPeVr16712c6RI0c89Y4ePWp++MMfmo4dO5ro6Ggza9asgFL6hg0bzMCBA0379u3NzTffbD744AOv8hMnTpiUlBTTo0cPExoaagYOHGgWL17sNXJxvUD7/Ic//MHcfffdJjIy0nTp0sUkJSV5feONlnEPvfHGG6ZXr16mffv2pnfv3uaFF14I6D/lM2fOmMmTJ5vOnTubzp07m8mTJ5uSkhKf9QkgvrXm+2jq1KnV9jk7O7va+gSQ6rXWeyjQPo8cObLGOk0N76nvPm/ZssXEx8eb8PBwExYWZoYMGWJef/31gEdLYIfDmP8/aRYAAAAAGhm7YAEAAACwhgACAAAAwBoCCAAAAABrCCAAAAAArCGAAAAAALCGAAIAAADAGgIIAAAAAGsIIAAAAACsIYAAAAAAsIYAAgAAAMAaAggAAAAAawggAAAAAKwhgAAAAACwhgACAAAAwJr/B5sDYHBpxsLeAAAAAElFTkSuQmCC' width="800" height="400" >  
+    
+<div class="invisible-area area-AAPL-1">
+    <div class="tooltip"><pre>
+Date :2020-08-28
+Open :126.01
+High :126.44
+Low  :124.58
+Close:124.81
+Vol  :187630000</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-2">
+    <div class="tooltip"><pre>
+Date :2020-08-31
+Open :127.58
+High :131.0
+Low  :126.0
+Close:129.04
+Vol  :225702700</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-3">
+    <div class="tooltip"><pre>
+Date :2020-09-01
+Open :132.76
+High :134.8
+Low  :130.53
+Close:134.18
+Vol  :152470100</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-4">
+    <div class="tooltip"><pre>
+Date :2020-09-02
+Open :137.59
+High :137.98
+Low  :127.0
+Close:131.4
+Vol  :200119000</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-5">
+    <div class="tooltip"><pre>
+Date :2020-09-03
+Open :126.91
+High :128.84
+Low  :120.5
+Close:120.88
+Vol  :257599600</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-6">
+    <div class="tooltip"><pre>
+Date :2020-09-04
+Open :120.07
+High :123.7
+Low  :110.89
+Close:120.96
+Vol  :332607200</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-7">
+    <div class="tooltip"><pre>
+Date :2020-09-08
+Open :113.95
+High :118.99
+Low  :112.68
+Close:112.82
+Vol  :231366600</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-8">
+    <div class="tooltip"><pre>
+Date :2020-09-09
+Open :117.26
+High :119.14
+Low  :115.26
+Close:117.32
+Vol  :176940500</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-9">
+    <div class="tooltip"><pre>
+Date :2020-09-10
+Open :120.36
+High :120.5
+Low  :112.5
+Close:113.49
+Vol  :182274400</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-10">
+    <div class="tooltip"><pre>
+Date :2020-09-11
+Open :114.57
+High :115.23
+Low  :110.0
+Close:112.0
+Vol  :180860300</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-11">
+    <div class="tooltip"><pre>
+Date :2020-09-14
+Open :114.72
+High :115.93
+Low  :112.8
+Close:115.36
+Vol  :140150100</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-12">
+    <div class="tooltip"><pre>
+Date :2020-09-15
+Open :118.33
+High :118.83
+Low  :113.61
+Close:115.54
+Vol  :184642000</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-13">
+    <div class="tooltip"><pre>
+Date :2020-09-16
+Open :115.23
+High :116.0
+Low  :112.04
+Close:112.13
+Vol  :154679000</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-14">
+    <div class="tooltip"><pre>
+Date :2020-09-17
+Open :109.72
+High :112.2
+Low  :108.71
+Close:110.34
+Vol  :178011000</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-15">
+    <div class="tooltip"><pre>
+Date :2020-09-18
+Open :110.4
+High :110.88
+Low  :106.09
+Close:106.84
+Vol  :287104900</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-16">
+    <div class="tooltip"><pre>
+Date :2020-09-21
+Open :104.54
+High :110.19
+Low  :103.1
+Close:110.08
+Vol  :195713800</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-17">
+    <div class="tooltip"><pre>
+Date :2020-09-22
+Open :112.68
+High :112.86
+Low  :109.16
+Close:111.81
+Vol  :183055400</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-18">
+    <div class="tooltip"><pre>
+Date :2020-09-23
+Open :111.62
+High :112.11
+Low  :106.77
+Close:107.12
+Vol  :150718700</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-19">
+    <div class="tooltip"><pre>
+Date :2020-09-24
+Open :105.17
+High :110.25
+Low  :105.0
+Close:108.22
+Vol  :167743300</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AAPL-20">
+    <div class="tooltip"><pre>
+Date :2020-09-25
+Open :108.43
+High :112.44
+Low  :107.67
+Close:112.28
+Vol  :149736300</pre>
+    </div>
+</div>
+          
+    
+<div class = "invisible-area area-AAPL-pattern-1" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>three outside down</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABMklEQVR4nO3aMU7DMABAURchpizeOEau4FNxBo7BSXoFH6NbFk9dwsSAGhcF7OYb/TfWUhr5x02q+LSu6xqE8XT0Ceg7g8AYBMYgMAaBMQhM1yDpI/U8/L/kCoExCIxBYAwCYxAYg8AYBMYgMAaBMQjM89EnsEuM9bFSQpim+viytD+fDk4tXuHG9+2JKtcSppf6JC1vOycpxhDmeXss5/tjgwRptkLm19vJyJe8+fnXmG55D4ExCIxBYAwCYxCYZk9ZW09N5Vp8mtqpSZDd/ydU5U8WjEFgDAJjkN9I/fabGQTGIDAGgTEIjEFgDAJjEJixNjk80k8bKmrjf3x37wqBcYXU3LvSUwrhfO7yteMFyZX3K6XUxwYyVpCDrtpHarJRTu14U4cxCIxBYAwCYxCYT/XXP0CChiBzAAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="three_outside_down AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-2" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bullish separating line</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABA0lEQVR4nO3bMQ6CMBhA4WKMEwubx+AKnMozeAxvxDHcWDqx1JnB8CfU8EzfN/9BkheKJG1XSilJGJezb0BbBoExCIxBYAwCYxAYg3wxvaZTftcgMF1rH4bDcwjN5TWn/taHZpfHcuSWNq7VrvRHxvu4OzO/5/BcTS5ZMAaBMQiMQWAMAmMQGIPAGATGIDAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMAaBMQiMQWCa3Gwd2SCd11x9I3VEc8cR6Oo/IUPs/EXKOaU+dv4iLfXOX9D9Zska989VpHmOzzWk/pLlE3KI7xAY//bCGATGIDAGgTEIzAfG0zVp7XnoxQAAAABJRU5ErkJggg==' style= "border:1px solid #555"><br>
+        Bullish Continuation<br>
+        <p class="bullish_separating_line AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-4" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bearish engulfing</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABHElEQVR4nO3asW3DMBBA0XPg0o26jKEVOEnGyAwZw5NoBY3hTg0rN0ptI4APAW1+g//VBETggyfT0GHf9z2E8dF7A7plEBiDwBgExiAwBoE59t7Ay01Tbl2tEadTbu22/X8/d8YLEhExz4/XrGt+XUOOLBiDwHQLUs6l16PRPCEwBoExCIxBYJrfQ6af3MWrXmt67fbd7uJF95SL4fz5+EK1Xtb0upE4smAMAvOUkZUZM/VahxtHGc2DZF/A5Vxi+VpaP/7tObJgDAJjEBiDwHQL4gv9b54QGIPAGATmMNzX7/DPgMYLklVKxPL6Hx6OLBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMP65COMJgTEIjEFgDAJjEJhfyEs7MWB+fHEAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="bearish_engulfing AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-5" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>three outside down</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABMklEQVR4nO3aMU7DMABAURchpizeOEau4FNxBo7BSXoFH6NbFk9dwsSAGhcF7OYb/TfWUhr5x02q+LSu6xqE8XT0Ceg7g8AYBMYgMAaBMQhM1yDpI/U8/L/kCoExCIxBYAwCYxAYg8AYBMYgMAaBMQjM89EnsEuM9bFSQpim+viytD+fDk4tXuHG9+2JKtcSppf6JC1vOycpxhDmeXss5/tjgwRptkLm19vJyJe8+fnXmG55D4ExCIxBYAwCYxCYZk9ZW09N5Vp8mtqpSZDd/ydU5U8WjEFgDAJjkN9I/fabGQTGIDAGgTEIjEFgDAJjEJixNjk80k8bKmrjf3x37wqBcYXU3LvSUwrhfO7yteMFyZX3K6XUxwYyVpCDrtpHarJRTu14U4cxCIxBYAwCYxCYT/XXP0CChiBzAAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="three_outside_down AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-6" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bearish in neck</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABEElEQVR4nO3asU3EQBBA0TFCRE6cUYZbcCWUQQ2UQSVuYcu4zMlGTpaYyCM0wOf4L17dje7rNhh7GmOMEMbDbw+gzwwCYxAYg8AYBMYgMI/ln7gsuXO9R8xz7uxxfH2eP6Y+SETEul6faS1/7h/xyoIxCIxBYAwCYxAYg8AYBMYgMAaBMQjMVP4IF77LWt5y8/Wzx/yUm+94rZuvfpeV/fG2LWLfy78+Y32+3qG1W0ufq+SVBWMQGIPAGATGIDAGgTEIjEFgDAJjEJjveQ0ILrPu6GcvX4tk1C8X78T2vsX+8vO7Nq8sGIPAGATGIDAGgTEIjEFgDAJjEBiDwBgExl0WjP8QGIPAGATGIDAGgfkAxMk3KRNvhUIAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bearish Continuation<br>
+        <p class="bearish_in_neck AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-7" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>shootingstar</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAA7klEQVR4nO3bsQ2DMBBA0SPKDBYVqyBPjlglFWIEGqdKkS5RTvGX9d8Ax0lf2DRMrbUWwrj1XkDvDAJjEBiDwBgExiAw4wSptfcGKcYJMgiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMAaBMQiMQWAMAmMQGIPAGATGIDAGgTEIjEFgDAJjEBiDwEzd/qBa14jzzJv3eEQsS968UiL2PW/eh+5/f+LLeUbMc96848if14FHFoxBYAwCYxCYfpd6KbkX53Xlzislb9YX+n32Zqs1Ytt6b/EzjywYg8CMc2QNwjcExiAwBoExCIxBYJ5zbiSXEQiO/QAAAABJRU5ErkJggg==' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="shootingstar AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-8" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>doji</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAA4klEQVR4nO3ayw2DMBAAUROliJRBC1tJaqMSt+Ay0oVzjpRIe7DYQZl3tvh4BAbENuecTRi36gPQJ4PAGATGIDAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBfogjSvZrEBiDwBgExiAwBoExCIxBYAwCYxCYrexHuYjWej9/t8k38PEabX/sqbH9ue487su2dBHZyYsjlk50lrcsGIPAGARm/RoSyc/WY+THFiz+Vf7uKYvOWxaMQWAMAmMQmLpFXV95hcAYBMYgMAaBMQiMQWAMAmMQGIPAGATGIDAGgTEIzBsyVCR3dkbqrwAAAABJRU5ErkJggg==' style= "border:1px solid #555"><br>
+        Inconclusive<br>
+        <p class="doji AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bullish separating line</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABA0lEQVR4nO3bMQ6CMBhA4WKMEwubx+AKnMozeAxvxDHcWDqx1JnB8CfU8EzfN/9BkheKJG1XSilJGJezb0BbBoExCIxBYAwCYxAYg3wxvaZTftcgMF1rH4bDcwjN5TWn/taHZpfHcuSWNq7VrvRHxvu4OzO/5/BcTS5ZMAaBMQiMQWAMAmMQGIPAGATGIDAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMAaBMQiMQWCa3Gwd2SCd11x9I3VEc8cR6Oo/IUPs/EXKOaU+dv4iLfXOX9D9Zska989VpHmOzzWk/pLlE3KI7xAY//bCGATGIDAGgTEIzAfG0zVp7XnoxQAAAABJRU5ErkJggg==' style= "border:1px solid #555"><br>
+        Bullish Continuation<br>
+        <p class="bullish_separating_line AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-9" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bearish engulfing</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABHElEQVR4nO3asW3DMBBA0XPg0o26jKEVOEnGyAwZw5NoBY3hTg0rN0ptI4APAW1+g//VBETggyfT0GHf9z2E8dF7A7plEBiDwBgExiAwBoE59t7Ay01Tbl2tEadTbu22/X8/d8YLEhExz4/XrGt+XUOOLBiDwHQLUs6l16PRPCEwBoExCIxBYJrfQ6af3MWrXmt67fbd7uJF95SL4fz5+EK1Xtb0upE4smAMAvOUkZUZM/VahxtHGc2DZF/A5Vxi+VpaP/7tObJgDAJjEBiDwHQL4gv9b54QGIPAGATmMNzX7/DPgMYLklVKxPL6Hx6OLBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMP65COMJgTEIjEFgDAJjEJhfyEs7MWB+fHEAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="bearish_engulfing AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-10" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>three outside down</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABMklEQVR4nO3aMU7DMABAURchpizeOEau4FNxBo7BSXoFH6NbFk9dwsSAGhcF7OYb/TfWUhr5x02q+LSu6xqE8XT0Ceg7g8AYBMYgMAaBMQhM1yDpI/U8/L/kCoExCIxBYAwCYxAYg8AYBMYgMAaBMQjM89EnsEuM9bFSQpim+viytD+fDk4tXuHG9+2JKtcSppf6JC1vOycpxhDmeXss5/tjgwRptkLm19vJyJe8+fnXmG55D4ExCIxBYAwCYxCYZk9ZW09N5Vp8mtqpSZDd/ydU5U8WjEFgDAJjkN9I/fabGQTGIDAGgTEIjEFgDAJjEJixNjk80k8bKmrjf3x37wqBcYXU3LvSUwrhfO7yteMFyZX3K6XUxwYyVpCDrtpHarJRTu14U4cxCIxBYAwCYxCYT/XXP0CChiBzAAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="three_outside_down AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-11" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bullish separating line</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABA0lEQVR4nO3bMQ6CMBhA4WKMEwubx+AKnMozeAxvxDHcWDqx1JnB8CfU8EzfN/9BkheKJG1XSilJGJezb0BbBoExCIxBYAwCYxAYg3wxvaZTftcgMF1rH4bDcwjN5TWn/taHZpfHcuSWNq7VrvRHxvu4OzO/5/BcTS5ZMAaBMQiMQWAMAmMQGIPAGATGIDAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMAaBMQiMQWCa3Gwd2SCd11x9I3VEc8cR6Oo/IUPs/EXKOaU+dv4iLfXOX9D9Zska989VpHmOzzWk/pLlE3KI7xAY//bCGATGIDAGgTEIzAfG0zVp7XnoxQAAAABJRU5ErkJggg==' style= "border:1px solid #555"><br>
+        Bullish Continuation<br>
+        <p class="bullish_separating_line AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-12" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bullish in neck</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABEElEQVR4nO3asQnCQBSA4RcRqzTpHCMrZBLHcAbHcJKskDHs0lxlE2sFyaGn96P/Vz9I8IfjGa5ZlmUJYWxqv4DuGQTGIDAGgTEIjEFgtrUePJyHGA/j9x/cdXlzKUW0bd7sPL/+Pg+qBamq79dnpil/riCPLBiDwBgExiAwBoFpSn/t7U55a2W6pmh3eWvlfCy3Vv7l2tvv19fF6TJlzxWV++MNQ8T4/f9JHlkwBoExCIxBYAwCYxAYg8AYBMYgMAaBMQiMQWAMAmMQGIM8U+HTe4RBcAwCYxAYg8AYBMYgMAaBMQiMQWAMAmMQGIPAfORub8593HRN5e/t/oDit9/1Ho8sGIPAGATGIDAGgbkB8jE0rOH/rzoAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bullish Continuation<br>
+        <p class="bullish_in_neck AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-14" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bullish spinning top</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABA0lEQVR4nO3aMQrCMBhA4VTcKrgFJ68iPYkeTU8ivUon6SbYRZC6uLgp/phHeN8B/gYeTUJpM8/znISxKL0AvTMIjEFgDAJjEBiDwFQTpDt1pZcQopogtTAIjEFgDAJjEBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMAaBaUr9KLc77tI4jWHzhuuQtutt2Lzc5tQf+rB5n1r+/Ykv4zSmzWoTNu9yu4TPK8EtC8YgMAaBMQhMsUM9tzn04Lw/7qHzcpvDZn2j2LU3Wnfq0nl/Lr2Mn7llwRgExiAwBoExCIxBYAwCYxAYg8AYBMYgMNV8y6qFbwiMQWAMAmMQGIPAPAG7xC8oPsh5CgAAAABJRU5ErkJggg==' style= "border:1px solid #555"><br>
+        Bullish Reversal<br>
+        <p class="bullish_spinning_top AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bearish on neck</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAA+klEQVR4nO3asQ2DMBBAURNFqWjoGIMVmCozZDuPkY7GFY1Tp+KUGPER/9UnsPSFi0u6WmtNwrgdfQB9MwiMQWAMAmMQGIPAHBdkng97NZlfCIxBYAwCYxAYg8AYBMYgMAaBMQiMQWAMAtM1/wl3GGJzpaTU97HZZfn9PCdz3+Wp07Q9k3N87kK8smAMAmMQGIPAGATGIDAGgTEIjEFgDAJzuV3W8Iqdr6wl9Y/Y+ZZnu/O132WdYBE4jds7tPzO4bmWvLJgDAJjEBiDwBgExiAwBoExCIxBYAwCs8/fgOAi646yluZrkYj2y0X9xSsLxiAwBoExCIxBYD7+9jKpFbr98wAAAABJRU5ErkJggg==' style= "border:1px solid #555"><br>
+        Bearish Continuation<br>
+        <p class="bearish_on_neck AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-16" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>piercing line</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABE0lEQVR4nO3csQ2CUBRA0YexpKFzDFZgEsdwBsdwElZgDDuaX9FgbcUL+ehNuKd+QZKb/OTHF5p1XdcQxuXfL6BvBoExCIxBYAwCYxCYa/Undl1urpSIts3NzvP+99lpeA0x3sef/279IBERfb89M035uRPxyIIxCIxBYAwCYxAYg8AYBOaYewhY98xdXMtS0rPzo97F9XRBIiL62/aFdHpP6bmaPLJgDAJjEBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMAaBMQjMMX9QZbYNSzndVmJG/SDZPdxhiBh/vztL55EFYxAYg8AYBMYgMAaBMQjMKTcXM9uGZSnVtxIzGr91wuKRBWMQGIPAGATGIDAfPv8w7tTZrpgAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bullish Reversal<br>
+        <p class="piercing_line AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-17" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>hanging man</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAA40lEQVR4nO3awQmDQBQG4WdIDYsnWxErF1vxJFuCl/WcW0Ie7LDMV8CvMCiKTq21FsJ49T4BfTIIjEFgDAJjEBiDwLy7HXldI2rN2zvPiGXJ2ysl4jjy9r7UL0itEfOct3dd+XsdeMuCMQiMQWAMAmMQGIPAGASm33tIKbnP+vedu1dK3tYPpmE+UG1bxL73Pou/ecuCMQiMQWAMAmMQGIPAGATGIDAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMAaBMQjMOL+SDsIrBMYgMAaBMQiMQWAe9tQgHFcQyHsAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="hanging_man AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AAPL-pattern-18" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>evening star</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABL0lEQVR4nO3aMW7CMBhA4Z+q6pQlG8fIFXKqnqGn4go+RrcsnljSiQE1zsIf8WK9b0wExDzJWDaXdV3XEMbHux9AzwwCYxAYg8AYBMYgMP0Emed3P0GKfoJ0wiAwBoExCIxBYAwCYxAYg8AYBMYgMAaBuZzqCHdvv6qUiGlq37/d8p/nAOcKsmeeT/Ol73HKgjEIjEFgDALzmfEm48+4eb3eawxfQ/N1y/eS8fHHGLfHFBERtUYMjXEtr40pJUhExHT9v+Qsv2Xz+uNeqiNWWK1ldGuJXV4fk1MWjEFgDAJjEBiDwBgExiAwBoExCIxBYNK2TrrU2gqpNWWbZItBWvY2CQ88nXTKgjEIjEFgDAKT9qO+deBU7zX/IKpz/fwvqxNOWTAGgTEIjEFgDALzB89QPVMd5pIrAAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="evening_star AAPL" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+         
+</div>
+
+<div id = "AMZN">
+    <img src='data:image/png;base64,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' width="800" height="400" >  
+    
+<div class="invisible-area area-AMZN-1">
+    <div class="tooltip"><pre>
+Date :2020-08-28
+Open :3423.0
+High :3433.37
+Low  :3386.5
+Close:3401.8
+Vol  :2897000</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-2">
+    <div class="tooltip"><pre>
+Date :2020-08-31
+Open :3408.99
+High :3495.0
+Low  :3405.0
+Close:3450.96
+Vol  :4185900</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-3">
+    <div class="tooltip"><pre>
+Date :2020-09-01
+Open :3489.58
+High :3513.87
+Low  :3467.0
+Close:3499.12
+Vol  :3476400</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-4">
+    <div class="tooltip"><pre>
+Date :2020-09-02
+Open :3547.0
+High :3552.25
+Low  :3486.69
+Close:3531.45
+Vol  :3931500</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-5">
+    <div class="tooltip"><pre>
+Date :2020-09-03
+Open :3485.0
+High :3488.41
+Low  :3303.0
+Close:3368.0
+Vol  :8161100</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-6">
+    <div class="tooltip"><pre>
+Date :2020-09-04
+Open :3318.0
+High :3381.5
+Low  :3111.13
+Close:3294.62
+Vol  :8781800</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-7">
+    <div class="tooltip"><pre>
+Date :2020-09-08
+Open :3144.0
+High :3250.85
+Low  :3130.0
+Close:3149.84
+Vol  :6094200</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-8">
+    <div class="tooltip"><pre>
+Date :2020-09-09
+Open :3202.99
+High :3303.18
+Low  :3185.0
+Close:3268.61
+Vol  :5188700</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-9">
+    <div class="tooltip"><pre>
+Date :2020-09-10
+Open :3307.22
+High :3349.89
+Low  :3170.55
+Close:3175.11
+Vol  :5330700</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-10">
+    <div class="tooltip"><pre>
+Date :2020-09-11
+Open :3208.69
+High :3217.34
+Low  :3083.98
+Close:3116.22
+Vol  :5094000</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-11">
+    <div class="tooltip"><pre>
+Date :2020-09-14
+Open :3172.94
+High :3187.39
+Low  :3096.0
+Close:3102.97
+Vol  :4529600</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-12">
+    <div class="tooltip"><pre>
+Date :2020-09-15
+Open :3136.16
+High :3175.02
+Low  :3108.92
+Close:3156.13
+Vol  :4021500</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-13">
+    <div class="tooltip"><pre>
+Date :2020-09-16
+Open :3179.99
+High :3187.24
+Low  :3074.15
+Close:3078.1
+Vol  :4512200</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-14">
+    <div class="tooltip"><pre>
+Date :2020-09-17
+Open :3009.25
+High :3029.43
+Low  :2972.55
+Close:3008.73
+Vol  :6449100</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-15">
+    <div class="tooltip"><pre>
+Date :2020-09-18
+Open :3031.74
+High :3037.8
+Low  :2905.54
+Close:2954.91
+Vol  :8892600</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-16">
+    <div class="tooltip"><pre>
+Date :2020-09-21
+Open :2906.5
+High :2962.0
+Low  :2871.0
+Close:2960.47
+Vol  :6117900</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-17">
+    <div class="tooltip"><pre>
+Date :2020-09-22
+Open :3033.84
+High :3133.99
+Low  :3000.2
+Close:3128.99
+Vol  :6948800</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-18">
+    <div class="tooltip"><pre>
+Date :2020-09-23
+Open :3120.43
+High :3127.0
+Low  :2992.38
+Close:2999.86
+Vol  :5652700</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-19">
+    <div class="tooltip"><pre>
+Date :2020-09-24
+Open :2977.79
+High :3069.3
+Low  :2965.0
+Close:3019.79
+Vol  :5529400</pre>
+    </div>
+</div>
+        
+<div class="invisible-area area-AMZN-20">
+    <div class="tooltip"><pre>
+Date :2020-09-25
+Open :3054.86
+High :3101.54
+Low  :2999.0
+Close:3095.13
+Vol  :4607700</pre>
+    </div>
+</div>
+          
+    
+<div class = "invisible-area area-AMZN-pattern-1" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>homing pigeon</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAA80lEQVR4nO3cQQrCMBBA0am47KY36RVy8l6hN+km+7gWFKMk5Ev+Ww8a+DBKIy6llBLCuI0+gJ4ZBMYgMAaBMQiMQWDuzV9x2+rmco5Y17rZ6/r9PH+mfZCIiH3/PHOe9XMTcWXBGATGIDAGgTEIjEFgDAJjkHdSGvK2BoExCIxBYAwCYxAYg8AYBMYgMH0uqMi+udGsnW14ozlfkAj0jaYrC8YgMAaBmfMzpGbv5zzkFy/zBan9RpRSxHH0PcsLriwYg8AYBMYgMAaBMQiMQWAMAmMQGIPAGASmz7Ms8MM7usX/OmFxZcEYBMYgMAaBMQjMA9s1JyMJAw++AAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bullish Reversal<br>
+        <p class="homing_pigeon AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AMZN-pattern-4" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>hanging man</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAA40lEQVR4nO3awQmDQBQG4WdIDYsnWxErF1vxJFuCl/WcW0Ie7LDMV8CvMCiKTq21FsJ49T4BfTIIjEFgDAJjEBiDwLy7HXldI2rN2zvPiGXJ2ysl4jjy9r7UL0itEfOct3dd+XsdeMuCMQiMQWAMAmMQGIPAGASm33tIKbnP+vedu1dK3tYPpmE+UG1bxL73Pou/ecuCMQiMQWAMAmMQGIPAGATGIDAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMAaBMQjMOL+SDsIrBMYgMAaBMQiMQWAe9tQgHFcQyHsAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="hanging_man AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AMZN-pattern-7" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>gravestone doji</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAAwUlEQVR4nO3cwQmDQBRF0TEV2YKVmNK0Izsy60AWWQhe5JwCHh8uzHKm8zzPQcbr7gP4JkiMIDGCxAgSI0jMc4Isy90XXOI5QR5CkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYqbbvtbYtjH2/bq94xhjnq/bW9cx3u/r9v50XxB+8mTFCBIjSIwgMYLEfADW7RLYqZiPNgAAAABJRU5ErkJggg==' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="gravestone_doji AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>unique three river bottom</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABWElEQVR4nO3bsW3DMBBG4XNgpFKjzmNoBU6SMTJDxsgkWoFjuFPDyo1cGC4Mk2xEyT8P7yslxDHwIFLHIKd1XVeDjK9PfwG8IogYgoghiBiCiCGImH2DhLDrx3vEEyKGIGIIIoYgYggi5tTkcHEc89dTMhuG8s8ty+Zf7c252SdN0/u1GPPXn/fwhiVLDEHEEESMnyBOjmn8BHGCIGLavfYeoTTvmD1mntr9TmaevoKY1ecaBzMPS5YYgoghiJj+9pDSfpBSV3tFSV9Bam9KIZjN83HfZScsWWIIIoYgYvraQw40/pWn/nRLNnzn/xK6/G47ESBIxXTJT/7xGrP34nX7Wx5Llph2T0huBnAyGxypTZBOTlJ7wJIlhk29orRJp1tqsoHnEKSg9voa/oPNP/sc07BkiSGIGD9BHJz0mnkK4gRBxLT5dwQ0wxMihiBiCCKGIGIIIuYOkklIS69JbQ4AAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bearish Continuation<br>
+        <p class="unique_three_river_bottom AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AMZN-pattern-8" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>morning star</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABOElEQVR4nO3asW2EMBhA4f+iUyoauozBCDBVZsgW2eRW8BjX0VBd41QpohikCPt4Qe8rsYSRnrAlwyXnnEMYL0c/gH4yCIxBYAwCYxAYg8Bcj34Aqv6jXx1bHkt0r11xbH6fd81rkA3D21C8nu6pOJbuafecLlkwBoExCIxBYAwCYxAYg8AYBMYgMG2DTFPT25+RbwiMQWDqHC72Kyejy7I+FhEx7zsZPaN6p71D4WQ0pfL17zH94pIFYxCYS5Uf5bb2kK78ZS0i6u4h0xRxu1W73VFfDCO3NI5Nb3/UXONnu7lcsmAMAvO/fnLYOopJaXu84v7SUp1NfU3ljRYzV0MuWTAGgWkb5ARLyLP5hsAYBMYgMAaBMQiMQWAMAmMQGIPAGASm7Wmv/sw3BMYgMAaBMQiMQWC+ACuLxCvS0ep2AAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bullish Reversal<br>
+        <p class="morning_star AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>morning doji star</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABOElEQVR4nO3asW2EMBhA4f+iUyoauozBCDBVZsgW2eRW8BjX0VBd41QpohikCPt4Qe8rsYSRnrAlwyXnnEMYL0c/gH4yCIxBYAwCYxAYg8Bcj34Aqv6jXx1bHkt0r11xbH6fd81rkA3D21C8nu6pOJbuafecLlkwBoExCIxBYAwCYxAYg8AYBMYgMG2DTFPT25+RbwiMQWDqHC72Kyejy7I+FhEx7zsZPaN6p71D4WQ0pfL17zH94pIFYxCYS5Uf5bb2kK78ZS0i6u4h0xRxu1W73VFfDCO3NI5Nb3/UXONnu7lcsmAMAvO/fnLYOopJaXu84v7SUp1NfU3ljRYzV0MuWTAGgWkb5ARLyLP5hsAYBMYgMAaBMQiMQWAMAmMQGIPAGASm7Wmv/sw3BMYgMAaBMQiMQWC+ACuLxCvS0ep2AAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bullish Reversal<br>
+        <p class="morning_doji_star AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AMZN-pattern-9" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bearish engulfing</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABHElEQVR4nO3asW3DMBBA0XPg0o26jKEVOEnGyAwZw5NoBY3hTg0rN0ptI4APAW1+g//VBETggyfT0GHf9z2E8dF7A7plEBiDwBgExiAwBoE59t7Ay01Tbl2tEadTbu22/X8/d8YLEhExz4/XrGt+XUOOLBiDwHQLUs6l16PRPCEwBoExCIxBYJrfQ6af3MWrXmt67fbd7uJF95SL4fz5+EK1Xtb0upE4smAMAvOUkZUZM/VahxtHGc2DZF/A5Vxi+VpaP/7tObJgDAJjEBiDwHQL4gv9b54QGIPAGATmMNzX7/DPgMYLklVKxPL6Hx6OLBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMP65COMJgTEIjEFgDAJjEJhfyEs7MWB+fHEAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="bearish_engulfing AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AMZN-pattern-10" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>three outside down</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABMklEQVR4nO3aMU7DMABAURchpizeOEau4FNxBo7BSXoFH6NbFk9dwsSAGhcF7OYb/TfWUhr5x02q+LSu6xqE8XT0Ceg7g8AYBMYgMAaBMQhM1yDpI/U8/L/kCoExCIxBYAwCYxAYg8AYBMYgMAaBMQjM89EnsEuM9bFSQpim+viytD+fDk4tXuHG9+2JKtcSppf6JC1vOycpxhDmeXss5/tjgwRptkLm19vJyJe8+fnXmG55D4ExCIxBYAwCYxCYZk9ZW09N5Vp8mtqpSZDd/ydU5U8WjEFgDAJjkN9I/fabGQTGIDAGgTEIjEFgDAJjEJixNjk80k8bKmrjf3x37wqBcYXU3LvSUwrhfO7yteMFyZX3K6XUxwYyVpCDrtpHarJRTu14U4cxCIxBYAwCYxCYT/XXP0CChiBzAAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="three_outside_down AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AMZN-pattern-11" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>three black crow</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABBUlEQVR4nO3aPQ6CMABA4WIcWbgJV+jJuQI3YWGvk4PhJ9EWeNT3jTVSzIuFok1KKQVhPK4+AX0yCIxBYAwCYxAYg8AcGyTGQw9fI78hMAaBMQhMU+TRSdetj89zCG27/b5pyp66Ns9iR+r75dg4ro+/X9OCSxaMQWAMAmMQGIPAGATGIDD32hhuzXPEXBcpszE888PubTQr2IS6ZMEYBMYgMAaBMQiMQWAMAmMQGIPAGATGIDAGgSnztPcsf/C0915B9sQYwjBcfRbZXLJgDAJjEJhyfyWtza83EJk3D/Vc1Evruu9/Lh7H7CAuWTAGgXHJ2uI1RCG4ZOEYBMYgMAaBMQjMC9UqSqNBCap/AAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="three_black_crow AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>three star in the south</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABMElEQVR4nO3aQQ6CMBQA0a9x6cabeAVOzhW8iRv2uFATjUCitjK/zltCBJKxpTZuxnEcQxjbtR9AzwwCYxAYg8AYBMYgMHWDdF3Vy7fIEQJjEJhNkV/qh8P08WGI2O/nP3c+f33r1uyKXel4fD12Ok0fv5/TC6csGIPAGATGIDAGgTEIjEFg2gnSyL5ZO0EaYRCYclsnvzC3ZxZx3TdbOp9k3yxXkIjlvbEG9s2csmAM8omKKzqDwBgEptxLferFOQypXqhPPl3RfbmaKxNk7iG6LqLvi9xiFe+u6Ap8+ZyyYAwCUzdI5ulqJY4QmHxbJ3Mvzswruge5giwtKbOv6G6csmByjZBfW2F6LPPf3n9TcXp0yoIxCIxBYAwCYxAYV1kwjhAYg8AYBMYgMAaBuQANPkStpTtrwAAAAABJRU5ErkJggg==' style= "border:1px solid #555"><br>
+        Bearish Continuation<br>
+        <p class="three_star_in_the_south AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AMZN-pattern-13" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bearish engulfing</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABHElEQVR4nO3asW3DMBBA0XPg0o26jKEVOEnGyAwZw5NoBY3hTg0rN0ptI4APAW1+g//VBETggyfT0GHf9z2E8dF7A7plEBiDwBgExiAwBoE59t7Ay01Tbl2tEadTbu22/X8/d8YLEhExz4/XrGt+XUOOLBiDwHQLUs6l16PRPCEwBoExCIxBYJrfQ6af3MWrXmt67fbd7uJF95SL4fz5+EK1Xtb0upE4smAMAvOUkZUZM/VahxtHGc2DZF/A5Vxi+VpaP/7tObJgDAJjEBiDwHQL4gv9b54QGIPAGATmMNzX7/DPgMYLklVKxPL6Hx6OLBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBMYgMP65COMJgTEIjEFgDAJjEJhfyEs7MWB+fHEAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="bearish_engulfing AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AMZN-pattern-14" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>doji</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAAA4klEQVR4nO3ayw2DMBAAUROliJRBC1tJaqMSt+Ay0oVzjpRIe7DYQZl3tvh4BAbENuecTRi36gPQJ4PAGATGIDAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBfogjSvZrEBiDwBgExiAwBoExCIxBYAwCYxCYrexHuYjWej9/t8k38PEabX/sqbH9ue487su2dBHZyYsjlk50lrcsGIPAGARm/RoSyc/WY+THFiz+Vf7uKYvOWxaMQWAMAmMQmLpFXV95hcAYBMYgMAaBMQiMQWAMAmMQGIPAGATGIDAGgTEIzBsyVCR3dkbqrwAAAABJRU5ErkJggg==' style= "border:1px solid #555"><br>
+        Inconclusive<br>
+        <p class="doji AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>three outside down</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABMklEQVR4nO3aMU7DMABAURchpizeOEau4FNxBo7BSXoFH6NbFk9dwsSAGhcF7OYb/TfWUhr5x02q+LSu6xqE8XT0Ceg7g8AYBMYgMAaBMQhM1yDpI/U8/L/kCoExCIxBYAwCYxAYg8AYBMYgMAaBMQjM89EnsEuM9bFSQpim+viytD+fDk4tXuHG9+2JKtcSppf6JC1vOycpxhDmeXss5/tjgwRptkLm19vJyJe8+fnXmG55D4ExCIxBYAwCYxCYZk9ZW09N5Vp8mtqpSZDd/ydU5U8WjEFgDAJjkN9I/fabGQTGIDAGgTEIjEFgDAJjEJixNjk80k8bKmrjf3x37wqBcYXU3LvSUwrhfO7yteMFyZX3K6XUxwYyVpCDrtpHarJRTu14U4cxCIxBYAwCYxCYT/XXP0CChiBzAAAAAElFTkSuQmCC' style= "border:1px solid #555"><br>
+        Bearish Reversal<br>
+        <p class="three_outside_down AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+        
+<div class = "invisible-area area-AMZN-pattern-16" ><p class = "pattern"> ! </p>
+    <div class="tooltip">
+        
+        <pr>
+        <p style="text-align:center;width:150px;">
+        <b>bearish in neck</b><br>
+        <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAADh0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uMy4yLjIsIGh0dHA6Ly9tYXRwbG90bGliLm9yZy+WH4yJAAABEElEQVR4nO3asU3EQBBA0TFCRE6cUYZbcCWUQQ2UQSVuYcu4zMlGTpaYyCM0wOf4L17dje7rNhh7GmOMEMbDbw+gzwwCYxAYg8AYBMYgMI/ln7gsuXO9R8xz7uxxfH2eP6Y+SETEul6faS1/7h/xyoIxCIxBYAwCYxAYg8AYBMYgMAaBMQjMVP4IF77LWt5y8/Wzx/yUm+94rZuvfpeV/fG2LWLfy78+Y32+3qG1W0ufq+SVBWMQGIPAGATGIDAGgTEIjEFgDAJjEJjveQ0ILrPu6GcvX4tk1C8X78T2vsX+8vO7Nq8sGIPAGATGIDAGgTEIjEFgDAJjEBiDwBgExl0WjP8QGIPAGATGIDAGgfkAxMk3KRNvhUIAAAAASUVORK5CYII=' style= "border:1px solid #555"><br>
+        Bearish Continuation<br>
+        <p class="bearish_in_neck AMZN" style="text-align:center"></p>
+        </p>
+        </pr>
+            
+    </div>
+</div>
+         
+</div>
+
+
+<p style ="position:absolute;left:105px; top:118px;" min="1">Stock</p>
+<p style ="position:absolute;left:480px; top:120px;" min="1">Time-Gap</p>
+<input type="range" name="rangeInput" style ="position:absolute;left:550px; top:124px;" min="1" max="10" value = "5" onchange="updateTextInput(this.value);">
+<input type="text" id="textInput" value="5" size="1" style ="position:absolute;left:690px; top:124px;" >
+
+
+
+</div>
+<div id="Top Gain" class="tabcontent">
+    <h3>Happening Pattern</h3>
+
+    <table>
+    <tr>
+    <th>Date</th><th>Pattern</th><th>Stock</th><th>Up Rate</th><th>Count</th></tr><tr><td>2020-09-23</td><td>evening star</td><td>AAPL</td><td>69.9%</td><td>37</td></tr><tr><td>2020-09-16</td><td>three black crow</td><td>UNVR.JK</td><td>69.55%</td><td>21</td></tr><tr><td>2020-09-17</td><td>three outside down</td><td>AMZN</td><td>59.54%</td><td>122</td></tr><tr><td>2020-09-14</td><td>bullish separating line</td><td>AAPL</td><td>58.93%</td><td>293</td></tr><tr><td>2020-09-21</td><td>bearish in neck</td><td>AMZN</td><td>58.71%</td><td>88</td></tr><tr><td>2020-09-14</td><td>three black crow</td><td>AMZN</td><td>57.91%</td><td>55</td></tr><tr><td>2020-09-21</td><td>piercing line</td><td>AAPL</td><td>57.38%</td><td>128</td></tr><tr><td>2020-09-15</td><td>bullish in neck</td><td>AAPL</td><td>56.15%</td><td>153</td></tr><tr><td>2020-09-17</td><td>bullish spinning top</td><td>AAPL</td><td>55.74%</td><td>265</td></tr><tr><td>2020-09-23</td><td>tweezer top</td><td>UNVR.JK</td><td>55.43%</td><td>102</td></tr><tr><td>2020-09-17</td><td>doji</td><td>AMZN</td><td>55.29%</td><td>216</td></tr><tr><td>2020-09-22</td><td>hanging man</td><td>AAPL</td><td>53.14%</td><td>111</td></tr><tr><td>2020-09-14</td><td>three star in the south</td><td>AMZN</td><td>50.98%</td><td>56</td></tr><tr><td>2020-09-25</td><td>tweezer bottom</td><td>UNVR.JK</td><td>50.14%</td><td>69</td></tr><tr><td>2020-09-17</td><td>tweezer bottom</td><td>UNVR.JK</td><td>50.14%</td><td>69</td></tr><tr><td>2020-09-16</td><td>bearish engulfing</td><td>AMZN</td><td>49.63%</td><td>92</td></tr><tr><td>2020-09-17</td><td>bearish on neck</td><td>AAPL</td><td>45.42%</td><td>29</td></tr></table>
+</div>
+
+
+<p id = "demo"><p>
+
+<script>
+
+var acc_dicts = {'doji UNVR': [738, [59.49, 56.91, 56.5, 57.86, 57.99, 58.27, 57.86, 57.32, 58.27, 60.3]], 'gravestone_doji UNVR': [467, [68.09, 67.45, 70.24, 70.02, 68.95, 71.31, 71.95, 70.02, 70.24, 70.66]], 'dragonfly_doji UNVR': [545, [49.54, 52.66, 52.11, 49.36, 51.19, 51.19, 49.91, 55.23, 54.86, 53.21]], 'bullish_spinning_top UNVR': [19, [42.11, 47.37, 31.58, 36.84, 57.89, 57.89, 63.16, 57.89, 68.42, 57.89]], 'bearish_spinning_top UNVR': [31, [38.71, 51.61, 58.06, 45.16, 54.84, 51.61, 58.06, 54.84, 54.84, 51.61]], 'inverted_Hammer UNVR': [38, [60.53, 63.16, 60.53, 55.26, 57.89, 57.89, 52.63, 50.0, 44.74, 50.0]], 'shootingstar UNVR': [27, [66.67, 70.37, 70.37, 74.07, 81.48, 85.19, 81.48, 74.07, 74.07, 62.96]], 'hanging_man UNVR': [34, [50.0, 35.29, 41.18, 32.35, 38.24, 35.29, 38.24, 35.29, 38.24, 47.06]], 'hammer UNVR': [37, [51.35, 51.35, 48.65, 40.54, 37.84, 40.54, 51.35, 48.65, 51.35, 48.65]], 'bullish_marubozu UNVR': [192, [47.92, 44.79, 46.35, 48.96, 46.88, 51.56, 47.92, 50.0, 51.04, 51.56]], 'bearish_marubozu UNVR': [164, [69.51, 68.29, 65.85, 67.07, 64.63, 62.8, 60.37, 60.37, 60.98, 58.54]], 'bullish_belt_hold UNVR': [27, [48.15, 62.96, 51.85, 37.04, 44.44, 37.04, 37.04, 37.04, 44.44, 48.15]], 'bearish_belt_hold UNVR': [31, [70.97, 67.74, 64.52, 54.84, 54.84, 51.61, 58.06, 51.61, 51.61, 58.06]], 'bullish_engulfing UNVR': [18, [33.33, 33.33, 33.33, 38.89, 38.89, 22.22, 33.33, 22.22, 33.33, 33.33]], 'bearish_engulfing UNVR': [11, [54.55, 54.55, 54.55, 45.45, 54.55, 63.64, 45.45, 45.45, 36.36, 18.18]], 'tweezer_top UNVR': [102, [59.8, 57.84, 55.45, 58.42, 56.44, 56.44, 50.5, 49.5, 53.47, 56.44]], 'tweezer_bottom UNVR': [69, [52.94, 50.0, 52.94, 51.47, 47.06, 48.53, 46.27, 46.27, 50.75, 55.22]], 'bullish_separating_line UNVR': [30, [60.0, 60.0, 56.67, 53.33, 56.67, 60.0, 50.0, 40.0, 36.67, 53.33]], 'piercing_line UNVR': [11, [27.27, 27.27, 36.36, 45.45, 45.45, 45.45, 54.55, 45.45, 36.36, 63.64]], 'dark_cloud_cover UNVR': [17, [88.24, 58.82, 70.59, 64.71, 47.06, 35.29, 41.18, 35.29, 41.18, 52.94]], 'bullish_harami UNVR': [15, [60.0, 53.33, 46.67, 40.0, 46.67, 46.67, 46.67, 40.0, 40.0, 40.0]], 'bearish_harami UNVR': [12, [41.67, 50.0, 50.0, 41.67, 41.67, 50.0, 33.33, 50.0, 41.67, 41.67]], 'bullish_harami_cross UNVR': [12, [50.0, 66.67, 58.33, 66.67, 66.67, 66.67, 58.33, 50.0, 50.0, 41.67]], 'bearish_harami_cross UNVR': [18, [55.56, 66.67, 61.11, 55.56, 61.11, 55.56, 38.89, 38.89, 50.0, 50.0]], 'descending_hawk UNVR': [31, [29.03, 41.94, 45.16, 41.94, 45.16, 48.39, 45.16, 54.84, 54.84, 58.06]], 'homing_pigeon UNVR': [27, [48.15, 48.15, 48.15, 48.15, 37.04, 40.74, 51.85, 51.85, 55.56, 48.15]], 'bullish_in_neck UNVR': [41, [46.34, 34.15, 29.27, 41.46, 48.78, 53.66, 43.9, 48.78, 46.34, 48.78]], 'bearish_in_neck UNVR': [24, [45.83, 58.33, 54.17, 50.0, 54.17, 58.33, 45.83, 50.0, 50.0, 50.0]], 'bullish_on_neck UNVR': [4, [100.0, 50.0, 50.0, 75.0, 75.0, 75.0, 50.0, 50.0, 75.0, 75.0]], 'bearish_on_neck UNVR': [4, [75.0, 75.0, 100.0, 50.0, 50.0, 50.0, 50.0, 100.0, 100.0, 50.0]], 'morning_star UNVR': [6, [83.33, 66.67, 66.67, 66.67, 66.67, 50.0, 50.0, 33.33, 16.67, 33.33]], 'evening_star UNVR': [4, [75.0, 75.0, 50.0, 50.0, 50.0, 50.0, 75.0, 75.0, 75.0, 75.0]], 'morning_doji_star UNVR': [3, [100.0, 66.67, 66.67, 66.67, 66.67, 33.33, 33.33, 0.0, 0.0, 0.0]], 'evening_doji_star UNVR': [3, [66.67, 66.67, 33.33, 33.33, 33.33, 33.33, 66.67, 66.67, 66.67, 66.67]], 'three_white_soldier UNVR': [20, [35.0, 30.0, 15.0, 20.0, 10.0, 25.0, 15.0, 20.0, 30.0, 25.0]], 'three_black_crow UNVR': [21, [71.43, 90.48, 66.67, 61.9, 71.43, 66.67, 61.9, 70.0, 65.0, 70.0]], 'three_inside_up UNVR': [22, [31.82, 63.64, 50.0, 54.55, 54.55, 50.0, 40.91, 45.45, 59.09, 50.0]], 'three_inside_down UNVR': [13, [84.62, 61.54, 76.92, 76.92, 61.54, 61.54, 61.54, 53.85, 46.15, 69.23]], 'deliberation UNVR': [7, [28.57, 14.29, 42.86, 57.14, 42.86, 57.14, 57.14, 57.14, 42.86, 42.86]], 'three_outside_up UNVR': [10, [40.0, 40.0, 50.0, 20.0, 40.0, 10.0, 20.0, 20.0, 40.0, 20.0]], 'three_outside_down UNVR': [14, [50.0, 57.14, 57.14, 71.43, 78.57, 64.29, 57.14, 57.14, 71.43, 71.43]], 'upside_gap_three UNVR': [10, [80.0, 90.0, 90.0, 80.0, 70.0, 70.0, 70.0, 60.0, 70.0, 80.0]], 'downside_gap_three UNVR': [11, [18.18, 36.36, 54.55, 36.36, 27.27, 45.45, 45.45, 18.18, 18.18, 18.18]], 'unique_three_river_bottom UNVR': [1, [0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0]], 'bullish_tri_star UNVR': [16, [56.25, 62.5, 56.25, 50.0, 50.0, 68.75, 62.5, 50.0, 50.0, 50.0]], 'bearish_tri_star UNVR': [13, [69.23, 69.23, 61.54, 69.23, 69.23, 69.23, 76.92, 69.23, 76.92, 69.23]], 'three_star_in_the_north UNVR': [9, [33.33, 33.33, 33.33, 44.44, 44.44, 33.33, 44.44, 55.56, 55.56, 55.56]], 'three_star_in_the_south UNVR': [19, [52.63, 57.89, 57.89, 73.68, 73.68, 73.68, 78.95, 73.68, 73.68, 63.16]], 'doji AAPL': [346, [53.47, 52.89, 51.16, 52.6, 52.31, 52.6, 51.45, 53.47, 54.05, 54.62]], 'gravestone_doji AAPL': [437, [57.67, 53.09, 50.8, 47.83, 48.74, 50.8, 50.8, 52.17, 50.34, 48.05]], 'dragonfly_doji AAPL': [86, [47.67, 41.86, 55.81, 53.49, 55.81, 51.16, 51.16, 48.84, 48.84, 51.16]], 'bullish_spinning_top AAPL': [265, [56.98, 55.47, 54.72, 55.85, 58.49, 57.74, 56.06, 54.17, 53.03, 54.92]], 'bearish_spinning_top AAPL': [277, [53.07, 54.87, 54.51, 57.76, 56.68, 55.6, 55.96, 59.21, 58.12, 57.4]], 'inverted_Hammer AAPL': [100, [63.0, 57.0, 62.0, 65.0, 64.0, 63.0, 65.0, 66.0, 65.0, 62.0]], 'shootingstar AAPL': [78, [53.85, 60.26, 52.56, 52.56, 50.0, 53.85, 50.0, 58.97, 56.41, 51.28]], 'hanging_man AAPL': [111, [52.25, 48.65, 47.75, 48.18, 56.36, 55.45, 50.91, 55.45, 56.36, 60.0]], 'hammer AAPL': [88, [55.68, 51.14, 45.45, 54.55, 54.55, 54.55, 53.41, 54.55, 48.86, 47.73]], 'bullish_marubozu AAPL': [96, [52.08, 56.25, 53.12, 55.21, 56.25, 58.33, 59.38, 59.38, 62.5, 59.38]], 'bearish_marubozu AAPL': [336, [50.6, 46.43, 49.4, 49.11, 48.21, 49.7, 46.73, 44.94, 47.32, 47.02]], 'bullish_belt_hold AAPL': [74, [45.95, 51.35, 48.65, 50.0, 54.05, 56.76, 55.41, 55.41, 55.41, 58.11]], 'bearish_belt_hold AAPL': [54, [48.15, 55.56, 55.56, 50.0, 51.85, 51.85, 51.85, 55.56, 51.85, 51.85]], 'bullish_engulfing AAPL': [95, [45.26, 47.37, 53.68, 55.79, 49.47, 48.42, 46.32, 51.58, 54.74, 54.74]], 'bearish_engulfing AAPL': [139, [48.2, 51.08, 52.52, 54.68, 57.55, 54.68, 53.24, 58.99, 56.83, 56.12]], 'tweezer_top AAPL': [285, [46.32, 50.53, 55.44, 55.09, 50.88, 50.18, 49.82, 50.53, 52.28, 52.98]], 'tweezer_bottom AAPL': [245, [55.1, 51.84, 57.55, 56.73, 55.51, 55.51, 55.1, 54.69, 54.69, 51.84]], 'bullish_separating_line AAPL': [293, [58.02, 61.09, 57.34, 60.07, 60.41, 57.68, 58.7, 58.02, 57.68, 60.27]], 'piercing_line AAPL': [128, [60.16, 60.94, 54.69, 54.69, 53.54, 55.91, 59.84, 58.27, 58.27, 57.48]], 'dark_cloud_cover AAPL': [162, [51.85, 52.47, 46.91, 49.38, 48.77, 52.47, 51.85, 54.94, 55.56, 51.85]], 'bullish_harami AAPL': [135, [53.33, 51.85, 52.59, 52.59, 51.85, 51.11, 51.11, 51.11, 55.56, 51.11]], 'bearish_harami AAPL': [99, [45.45, 44.44, 50.51, 52.53, 51.52, 50.51, 49.49, 50.51, 51.52, 46.46]], 'bullish_harami_cross AAPL': [61, [44.26, 45.9, 45.9, 49.18, 42.62, 39.34, 37.7, 47.54, 49.18, 45.9]], 'bearish_harami_cross AAPL': [38, [55.26, 50.0, 52.63, 50.0, 47.37, 44.74, 50.0, 42.11, 42.11, 52.63]], 'descending_hawk AAPL': [115, [51.3, 49.57, 53.04, 57.39, 60.0, 60.0, 62.61, 60.87, 57.39, 62.61]], 'homing_pigeon AAPL': [125, [52.8, 51.2, 50.4, 53.6, 50.4, 52.0, 60.8, 59.2, 58.4, 60.0]], 'bullish_in_neck AAPL': [153, [53.59, 56.86, 58.17, 56.86, 58.17, 56.86, 52.29, 53.59, 55.92, 59.21]], 'bearish_in_neck AAPL': [122, [49.18, 49.18, 55.74, 57.38, 53.28, 57.38, 58.2, 59.84, 58.2, 54.92]], 'bullish_on_neck AAPL': [31, [35.48, 54.84, 38.71, 48.39, 51.61, 41.94, 41.94, 38.71, 38.71, 38.71]], 'bearish_on_neck AAPL': [29, [55.17, 37.93, 41.38, 44.83, 48.28, 55.17, 46.43, 46.43, 39.29, 39.29]], 'morning_star AAPL': [44, [47.73, 52.27, 45.45, 52.27, 45.45, 47.73, 52.27, 47.73, 45.45, 40.91]], 'evening_star AAPL': [37, [62.16, 72.97, 69.44, 69.44, 66.67, 66.67, 69.44, 77.78, 75.0, 69.44]], 'morning_doji_star AAPL': [26, [53.85, 46.15, 38.46, 50.0, 42.31, 42.31, 42.31, 34.62, 30.77, 30.77]], 'evening_doji_star AAPL': [19, [63.16, 78.95, 68.42, 78.95, 78.95, 78.95, 78.95, 73.68, 73.68, 78.95]], 'three_white_soldier AAPL': [115, [53.91, 60.0, 58.26, 60.0, 63.48, 62.61, 63.48, 65.22, 64.35, 66.96]], 'three_black_crow AAPL': [143, [61.54, 64.34, 57.34, 55.94, 53.85, 54.55, 55.24, 55.94, 54.55, 55.24]], 'three_inside_up AAPL': [126, [51.59, 50.79, 46.03, 45.24, 53.97, 52.38, 45.24, 50.0, 51.59, 52.38]], 'three_inside_down AAPL': [101, [53.47, 56.44, 63.37, 59.41, 61.39, 61.39, 56.44, 56.44, 59.41, 58.42]], 'deliberation AAPL': [60, [50.0, 43.33, 55.0, 65.0, 58.33, 51.67, 55.0, 55.0, 58.33, 65.0]], 'three_outside_up AAPL': [132, [53.03, 54.55, 50.0, 52.27, 54.55, 53.79, 54.55, 60.61, 59.09, 56.82]], 'three_outside_down AAPL': [149, [57.05, 59.06, 65.1, 55.7, 59.06, 57.72, 57.05, 57.05, 59.06, 63.09]], 'bullish_abandoned_baby AAPL': [1, [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]], 'bullish_stick_sandwich AAPL': [2, [100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 50.0, 100.0]], 'upside_gap_three AAPL': [97, [49.48, 58.76, 53.61, 60.82, 58.76, 56.7, 49.48, 52.58, 53.61, 54.64]], 'downside_gap_three AAPL': [102, [46.08, 45.1, 50.0, 51.96, 50.0, 48.04, 52.94, 56.86, 57.84, 57.84]], 'upside_gap_two_crow AAPL': [9, [44.44, 44.44, 66.67, 66.67, 66.67, 66.67, 66.67, 66.67, 66.67, 77.78]], 'unique_three_river_bottom AAPL': [17, [52.94, 58.82, 58.82, 47.06, 47.06, 47.06, 52.94, 58.82, 52.94, 58.82]], 'three_star_in_the_north AAPL': [102, [57.84, 53.92, 53.92, 62.75, 59.8, 58.82, 59.8, 60.78, 54.9, 57.84]], 'three_star_in_the_south AAPL': [96, [60.42, 61.46, 51.04, 55.21, 51.04, 51.04, 51.04, 54.17, 51.04, 51.04]], 'doji AMZN': [216, [51.39, 50.93, 53.24, 56.48, 55.56, 53.7, 57.21, 59.53, 58.14, 56.74]], 'gravestone_doji AMZN': [31, [45.16, 51.61, 48.39, 61.29, 64.52, 61.29, 67.74, 64.52, 64.52, 58.06]], 'dragonfly_doji AMZN': [54, [59.26, 59.26, 59.26, 62.96, 64.81, 59.26, 68.52, 68.52, 66.67, 68.52]], 'bullish_spinning_top AMZN': [184, [49.46, 54.89, 53.26, 55.43, 55.98, 56.52, 59.24, 60.33, 59.78, 60.87]], 'bearish_spinning_top AMZN': [186, [50.0, 52.69, 54.3, 55.91, 56.45, 54.84, 52.69, 56.99, 56.99, 54.3]], 'inverted_Hammer AMZN': [55, [49.09, 52.73, 63.64, 60.0, 54.55, 54.55, 56.36, 58.18, 56.36, 58.18]], 'shootingstar AMZN': [40, [40.0, 55.0, 50.0, 57.5, 70.0, 62.5, 70.0, 62.5, 60.0, 60.0]], 'hanging_man AMZN': [73, [31.51, 50.68, 54.79, 52.05, 50.68, 49.32, 41.1, 46.58, 45.21, 49.32]], 'hammer AMZN': [53, [37.74, 47.17, 45.28, 54.72, 52.83, 56.6, 54.72, 56.6, 60.38, 56.6]], 'bullish_marubozu AMZN': [54, [44.44, 51.85, 46.3, 50.0, 57.41, 57.41, 59.26, 59.26, 53.7, 53.7]], 'bearish_marubozu AMZN': [27, [40.74, 55.56, 40.74, 51.85, 51.85, 62.96, 55.56, 59.26, 59.26, 51.85]], 'bullish_belt_hold AMZN': [46, [43.48, 52.17, 52.17, 47.83, 56.52, 63.04, 56.52, 63.04, 58.7, 47.83]], 'bearish_belt_hold AMZN': [25, [44.0, 72.0, 52.0, 64.0, 60.0, 64.0, 56.0, 60.0, 60.0, 52.0]], 'bullish_engulfing AMZN': [74, [47.3, 52.7, 56.76, 54.05, 55.41, 55.41, 55.41, 52.7, 55.41, 51.35]], 'bearish_engulfing AMZN': [92, [45.65, 43.48, 47.83, 54.35, 47.83, 47.83, 52.17, 50.55, 52.75, 53.85]], 'tweezer_top AMZN': [143, [48.25, 45.45, 47.55, 45.45, 48.25, 48.25, 52.45, 56.64, 56.64, 58.04]], 'tweezer_bottom AMZN': [149, [47.65, 50.34, 48.32, 47.65, 48.99, 51.68, 49.66, 53.69, 51.68, 53.02]], 'bullish_separating_line AMZN': [235, [54.47, 51.49, 56.6, 52.77, 56.17, 53.19, 52.34, 52.77, 55.32, 55.32]], 'piercing_line AMZN': [104, [45.19, 51.92, 61.54, 54.81, 56.73, 64.42, 61.54, 61.54, 63.46, 64.42]], 'dark_cloud_cover AMZN': [110, [50.91, 56.36, 51.82, 60.91, 54.55, 58.18, 55.45, 60.0, 61.82, 62.73]], 'bullish_harami AMZN': [91, [54.95, 52.75, 54.95, 50.55, 53.85, 56.04, 60.44, 58.24, 58.24, 59.34]], 'bearish_harami AMZN': [107, [52.34, 52.34, 55.14, 51.4, 55.14, 53.27, 53.27, 54.21, 51.4, 52.34]], 'bullish_harami_cross AMZN': [45, [48.89, 46.67, 57.78, 60.0, 64.44, 55.56, 62.22, 53.33, 57.78, 53.33]], 'bearish_harami_cross AMZN': [43, [46.51, 44.19, 46.51, 53.49, 58.14, 53.49, 51.16, 58.14, 58.14, 53.49]], 'descending_hawk AMZN': [127, [43.31, 49.61, 52.76, 55.91, 60.63, 52.76, 54.33, 55.91, 55.12, 53.54]], 'homing_pigeon AMZN': [108, [58.33, 59.26, 57.41, 62.04, 62.04, 61.11, 54.63, 53.7, 54.63, 56.48]], 'bullish_in_neck AMZN': [124, [47.58, 41.13, 50.81, 54.03, 52.42, 53.23, 53.23, 56.45, 61.29, 58.06]], 'bearish_in_neck AMZN': [88, [52.27, 54.55, 57.95, 61.36, 55.17, 55.17, 60.92, 60.92, 64.37, 64.37]], 'bullish_on_neck AMZN': [26, [61.54, 61.54, 57.69, 69.23, 69.23, 61.54, 61.54, 61.54, 65.38, 61.54]], 'bearish_on_neck AMZN': [19, [52.63, 63.16, 57.89, 63.16, 63.16, 52.63, 63.16, 73.68, 73.68, 57.89]], 'morning_star AMZN': [45, [55.56, 40.0, 42.22, 42.22, 55.56, 46.67, 46.67, 46.67, 42.22, 48.89]], 'evening_star AMZN': [30, [63.33, 53.33, 46.67, 43.33, 33.33, 33.33, 46.67, 43.33, 50.0, 56.67]], 'morning_doji_star AMZN': [25, [68.0, 60.0, 52.0, 48.0, 52.0, 44.0, 44.0, 44.0, 40.0, 52.0]], 'evening_doji_star AMZN': [16, [37.5, 62.5, 50.0, 50.0, 43.75, 43.75, 43.75, 37.5, 31.25, 37.5]], 'three_white_soldier AMZN': [76, [52.63, 52.63, 59.21, 57.89, 59.21, 64.47, 56.58, 51.32, 53.95, 57.89]], 'three_black_crow AMZN': [55, [58.18, 60.0, 63.64, 61.82, 63.64, 65.45, 54.55, 52.73, 49.09, 50.0]], 'three_inside_up AMZN': [76, [50.0, 48.68, 46.05, 51.32, 50.0, 47.37, 46.05, 50.0, 47.37, 46.05]], 'three_inside_down AMZN': [109, [44.95, 43.12, 44.04, 46.79, 49.54, 50.46, 51.38, 52.29, 50.46, 50.46]], 'deliberation AMZN': [41, [43.9, 46.34, 43.9, 48.78, 56.1, 53.66, 51.22, 58.54, 56.1, 53.66]], 'three_outside_up AMZN': [96, [55.21, 54.17, 53.12, 57.29, 62.5, 62.5, 62.5, 63.54, 57.29, 62.5]], 'three_outside_down AMZN': [122, [54.92, 55.74, 61.48, 60.66, 59.84, 63.11, 61.16, 61.16, 58.68, 58.68]], 'bullish_abandoned_baby AMZN': [1, [100.0, 0.0, 100.0, 100.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]], 'bearish_abandoned_baby AMZN': [1, [0.0, 100.0, 100.0, 0.0, 0.0, 100.0, 100.0, 0.0, 0.0, 0.0]], 'bullish_stick_sandwich AMZN': [3, [66.67, 66.67, 66.67, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]], 'upside_gap_three AMZN': [67, [50.75, 40.3, 38.81, 38.81, 40.3, 46.27, 47.76, 44.78, 50.75, 43.28]], 'downside_gap_three AMZN': [77, [41.56, 42.86, 45.45, 45.45, 51.95, 57.14, 55.84, 53.25, 58.44, 57.14]], 'upside_gap_two_crow AMZN': [5, [20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 40.0]], 'unique_three_river_bottom AMZN': [10, [50.0, 60.0, 40.0, 20.0, 50.0, 30.0, 30.0, 40.0, 70.0, 70.0]], 'three_star_in_the_north AMZN': [67, [56.72, 61.19, 65.67, 67.16, 52.24, 58.21, 58.21, 58.21, 56.72, 56.72]], 'three_star_in_the_south AMZN': [56, [60.71, 57.14, 48.21, 53.57, 46.43, 44.64, 48.21, 51.79, 51.79, 47.27]]};
+var type_dicts = {'doji': 'I', 'gravestone_doji': 'BE RE', 'dragonfly_doji': 'BU RE', 'bullish_spinning_top': 'BU RE', 'bearish_spinning_top': 'BE RE', 'inverted_Hammer': 'BU RE', 'shootingstar': 'BE RE', 'hanging_man': 'BE RE', 'hammer': 'BU RE', 'bullish_marubozu': 'BU CO', 'bearish_marubozu': 'BE CO', 'bullish_belt_hold': 'BU RE', 'bearish_belt_hold': 'BE RE', 'bullish_engulfing': 'BU RE', 'bearish_engulfing': 'BE RE', 'tweezer_top': 'BE RE', 'tweezer_bottom': 'BU RE', 'bullish_separating_line': 'BU CO', 'piercing_line': 'BU RE', 'dark_cloud_cover': 'BE RE', 'matching_high': 'BU CO', 'matching_low': 'BE CO', 'bullish_harami': 'BU RE', 'bearish_harami': 'BE RE', 'bullish_harami_cross': 'BU RE', 'bearish_harami_cross': 'BE RE', 'descending_hawk': 'BE RE', 'homing_pigeon': 'BU RE', 'bullish_in_neck': 'BU CO', 'bearish_in_neck': 'BE CO', 'bullish_on_neck': 'BU CO', 'bearish_on_neck': 'BE CO', 'bullish_kicking': 'BU RE', 'bearish_kicking': 'BE RE', 'morning_star': 'BU RE', 'evening_star': 'BE RE', 'morning_doji_star': 'BU RE', 'evening_doji_star': 'BE RE', 'three_white_soldier': 'BU RE', 'three_black_crow': 'BE RE', 'three_inside_up': 'BU RE', 'three_inside_down': 'BE RE', 'deliberation': 'BU CO', 'three_outside_up': 'BU RE', 'three_outside_down': 'BE RE', 'bullish_abandoned_baby': 'BU RE', 'bearish_abandoned_baby': 'BE RE', 'bullish_stick_sandwich': 'BU CO', 'bearish_stick_sandwich': 'BE CO', 'bullish_side_by_side_white_line': 'BU CO', 'bearish_side_by_side_black_line': 'BE CO', 'bearish_side_by_side_white_line': 'BE CO', 'bullish_side_by_side_black_line': 'BU CO', 'upside_gap_three': 'BE RE', 'downside_gap_three': 'BU RE', 'upside_gap_two_crow': 'BU CO', 'unique_three_river_bottom': 'BE CO', 'bullish_tri_star': 'BU RE', 'bearish_tri_star': 'BE RE', 'three_star_in_the_north': 'BU CO', 'three_star_in_the_south': 'BE CO', 'bearish_separating_line': 'BE CO'};
+var stock_name = ['UNVR', 'AAPL', 'AMZN'];
+
+changeimage(stock_name[0])
+updateTextInput(5)
+
+function updateTextInput(val) {
+    document.getElementById('textInput').value=val;
+    for (var key in acc_dicts) {
+        var x = document.getElementsByClassName(key);
+        var i;
+        for (i = 0; i < x.length; i++) {
+            if ((type_dicts[key.slice(0,-5)] == "BU RE")||(type_dicts[key.slice(0,-5)] == "BU CO")||(type_dicts[key.slice(0,-5)] == "I")){
+                x[i].innerHTML = "<p style='color:green;font-size:20px;'>&#10138;<span style='color:black;font-size:15px;'>" 
+                + acc_dicts[key][1][val-1] + "%</span></p>" +  (acc_dicts[key][0]*acc_dicts[key][1][val-1]/100).toFixed(0) + 
+                " <span style='color:green;font-weight:10px'>Up</span> out of " + acc_dicts[key][0];
+                }
+            else{
+                x[i].innerHTML = "<p style='color:red;font-size:20px;'>&#10136;<span style='color:black;font-size:15px;'>" 
+                + (100 - acc_dicts[key][1][val-1]).toFixed(2) + "%</span></p>" +(acc_dicts[key][0]*(100-acc_dicts[key][1][val-1])/100).toFixed(0) + 
+                " <span style='color:red;font-weight:10px'>Down</span> out of " + acc_dicts[key][0];
+            }
+            }
+    }
+        }
+
+function openreport(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function changeimage(val){
+    for (i = 0; i < stock_name.length; i++){
+        document.getElementById(stock_name[i]).style.display = "none";
+    }
+    document.getElementById(val).style.display = "block";
+}
+</script>
+   
+</body>
+</html> 
+
